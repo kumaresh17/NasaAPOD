@@ -11,20 +11,22 @@ import CoreData
 
 // MARK: - HomeViewModel
 
-protocol HomeViewModelProtocol {
-
+protocol HomeViewModelProtocol: AnyObject {
+    
+    var dataForViewPub: Published<[AODViewModelProtocol]?>.Publisher { get  }
+    var errorPub: Published<Error?>.Publisher { get }
     func getAODDataForHomeScreen(apodRequest:APODRequestProtocol) -> Void
     func mapToViewModelProtocol(managedObject: [APODEntity]?) ->  [AODViewModelProtocol]?
 }
 
-
 class HomeViewModel:HomeViewModelProtocol {
-   
     /**
      Combine Publisher for which we have binded with View
     */
-    @Published var dataForView:[AODViewModelProtocol]? 
+    @Published var dataForView:[AODViewModelProtocol]?
     @Published var error:Error?
+    var dataForViewPub: Published<[AODViewModelProtocol]?>.Publisher {$dataForView}
+    var errorPub: Published<Error?>.Publisher {$error}
     var apiModuleProtocol:APIModuleProtocol?
     var apodResourceInteractorProtocol:APODResourceAPIInteractorProtocol?
     var manageObjectContext:NSManagedObjectContext = CoreDataStack.shared.managedObjectContext

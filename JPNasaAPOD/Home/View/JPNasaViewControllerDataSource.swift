@@ -11,22 +11,17 @@ import Foundation
 
 extension JPNasaViewController:UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.dataForView?.count ?? 0
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+        return  self.apodviewModelProtocol?.count ?? 0
     }
-        
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ADOTableViewCell.cellIdentifier, for: indexPath) as? ADOTableViewCell else {
             fatalError("no cell initialized")
         }
-        viewModel.$dataForView
-            .receive(on: DispatchQueue.main)
-            .sink { jobs in
-                guard let dataForView = self.viewModel.dataForView else {return}
-                cell.configureCell(with: dataForView[indexPath.row])
-            }
-            .store(in: &anyCancelable)
+        guard let dataValue = self.apodviewModelProtocol else {return cell}
+        cell.configureCell(with: dataValue[indexPath.row] )
         
         return cell
     }

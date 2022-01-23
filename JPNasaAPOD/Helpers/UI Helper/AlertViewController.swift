@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AlertDelegate {
+protocol AlertDelegate: AnyObject {
     func alert(buttonClickedIndex:Int, buttonTitle: String, tag: Int)
 }
 

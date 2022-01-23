@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - APOD request
 
-protocol APODRequestProtocol{
+protocol APODRequestProtocol {
     var startDate : String? {get set }
     var endDate: String? {get set}
 
