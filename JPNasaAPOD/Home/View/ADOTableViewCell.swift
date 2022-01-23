@@ -8,8 +8,7 @@
 import UIKit
 import AVKit
 import AVFoundation
-//import youtube_ios_player_helper
-import YoutubePlayer_in_WKWebView
+import YouTubeiOSPlayerHelper
 
 enum MediaType: String{
     case image = "image"
@@ -20,7 +19,7 @@ class ADOTableViewCell: UITableViewCell {
     
     static var cellIdentifier = "ADOTableViewCell"
 
-    @IBOutlet weak var ytPlayerView: WKYTPlayerView!
+    @IBOutlet weak var ytPlayerView: YTPlayerView!
     @IBOutlet weak var playerView: PlayerView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!

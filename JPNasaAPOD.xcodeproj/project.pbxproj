@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		404405D6279D9ED500EBFA06 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404405D5279D9ED500EBFA06 /* MockApiManager.swift */; };
+		404405DC279DC03D00EBFA06 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 404405DB279DC03D00EBFA06 /* YouTubeiOSPlayerHelper */; };
 		4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */; };
 		40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1027997A95002666D0 /* HomeViewModel.swift */; };
 		40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1327997EA8002666D0 /* APODResponseModel.swift */; };
@@ -39,9 +40,6 @@
 		40CB2F1A279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */; };
 		40CB2F1C279B79D700520DC8 /* APDOExtensionHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */; };
 		40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */; };
-		AFF3A5232628B475E59A1308 /* Pods_JPNasaAPOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7061FFBE15FA29214CCB8EB9 /* Pods_JPNasaAPOD.framework */; };
-		B4216C8C703EC4535D727C26 /* Pods_JPNasaAPODTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */; };
-		F88B6E42598F9A145AEC2756 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BF63C4906E00DAE107B755 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FDC10C1E8C631D77BAE1C61 /* Pods-JPNasaAPODTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPODTests.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPODTests/Pods-JPNasaAPODTests.release.xcconfig"; sourceTree = "<group>"; };
-		1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig"; sourceTree = "<group>"; };
-		15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPODTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD.debug.xcconfig"; sourceTree = "<group>"; };
 		404405D5279D9ED500EBFA06 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatatStackTest.swift; sourceTree = "<group>"; };
 		40B28B1027997A95002666D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -102,11 +96,6 @@
 		40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewDatePickerExtension.swift; sourceTree = "<group>"; };
 		40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDOExtensionHelperTest.swift; sourceTree = "<group>"; };
 		40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		532BF7448BC78C2BE1BCFCBD /* Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7061FFBE15FA29214CCB8EB9 /* Pods_JPNasaAPOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E39B97850398531E58EC911 /* Pods-JPNasaAPOD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD.release.xcconfig"; sourceTree = "<group>"; };
-		BF4C9AEE6830286BCDF7C69A /* Pods-JPNasaAPODTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPODTests.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPODTests/Pods-JPNasaAPODTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D0BF63C4906E00DAE107B755 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPOD_JPNasaAPODUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF3A5232628B475E59A1308 /* Pods_JPNasaAPOD.framework in Frameworks */,
+				404405DC279DC03D00EBFA06 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +111,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4216C8C703EC4535D727C26 /* Pods_JPNasaAPODTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F88B6E42598F9A145AEC2756 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +161,6 @@
 				40B608EB27983DCE00DBBA96 /* JPNasaAPODTests */,
 				40B608F527983DCE00DBBA96 /* JPNasaAPODUITests */,
 				40B608D327983DCB00DBBA96 /* Products */,
-				678D7C4DC6BF86B387CA6522 /* Pods */,
-				E4832CA9BED24CB932A31A57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,29 +254,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		678D7C4DC6BF86B387CA6522 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */,
-				7E39B97850398531E58EC911 /* Pods-JPNasaAPOD.release.xcconfig */,
-				532BF7448BC78C2BE1BCFCBD /* Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig */,
-				1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */,
-				BF4C9AEE6830286BCDF7C69A /* Pods-JPNasaAPODTests.debug.xcconfig */,
-				0FDC10C1E8C631D77BAE1C61 /* Pods-JPNasaAPODTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		E4832CA9BED24CB932A31A57 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7061FFBE15FA29214CCB8EB9 /* Pods_JPNasaAPOD.framework */,
-				D0BF63C4906E00DAE107B755 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework */,
-				15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,17 +261,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B608FC27983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPOD" */;
 			buildPhases = (
-				978A577F4413E9CD292640E7 /* [CP] Check Pods Manifest.lock */,
 				40B608CE27983DCB00DBBA96 /* Sources */,
 				40B608CF27983DCB00DBBA96 /* Frameworks */,
 				40B608D027983DCB00DBBA96 /* Resources */,
-				51566661BC1B38B92CCC47FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JPNasaAPOD;
+			packageProductDependencies = (
+				404405DB279DC03D00EBFA06 /* YouTubeiOSPlayerHelper */,
+			);
 			productName = JPNasaAPOD;
 			productReference = 40B608D227983DCB00DBBA96 /* JPNasaAPOD.app */;
 			productType = "com.apple.product-type.application";
@@ -318,7 +281,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B608FF27983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPODTests" */;
 			buildPhases = (
-				7AD1747497A89B6076F8CB2E /* [CP] Check Pods Manifest.lock */,
 				40B608E427983DCE00DBBA96 /* Sources */,
 				40B608E527983DCE00DBBA96 /* Frameworks */,
 				40B608E627983DCE00DBBA96 /* Resources */,
@@ -337,11 +299,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40B6090227983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPODUITests" */;
 			buildPhases = (
-				E8EFED54701E7A956B21C3A7 /* [CP] Check Pods Manifest.lock */,
 				40B608EE27983DCE00DBBA96 /* Sources */,
 				40B608EF27983DCE00DBBA96 /* Frameworks */,
 				40B608F027983DCE00DBBA96 /* Resources */,
-				421AF11E739EBFE6A9F2CF96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +345,9 @@
 				Base,
 			);
 			mainGroup = 40B608C927983DCB00DBBA96;
+			packageReferences = (
+				404405DA279DC03D00EBFA06 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = 40B608D327983DCB00DBBA96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,109 +385,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		421AF11E739EBFE6A9F2CF96 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51566661BC1B38B92CCC47FE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7AD1747497A89B6076F8CB2E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JPNasaAPODTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		978A577F4413E9CD292640E7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JPNasaAPOD-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8EFED54701E7A956B21C3A7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JPNasaAPOD-JPNasaAPODUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40B608CE27983DCB00DBBA96 /* Sources */ = {
@@ -663,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -718,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -730,12 +590,13 @@
 		};
 		40B608FD27983DCE00DBBA96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6748KGCB3N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JPNasaAPOD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -751,6 +612,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -759,12 +621,13 @@
 		};
 		40B608FE27983DCE00DBBA96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E39B97850398531E58EC911 /* Pods-JPNasaAPOD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6748KGCB3N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JPNasaAPOD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -780,6 +643,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -788,7 +652,6 @@
 		};
 		40B6090027983DCE00DBBA96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF4C9AEE6830286BCDF7C69A /* Pods-JPNasaAPODTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -813,7 +676,6 @@
 		};
 		40B6090127983DCE00DBBA96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FDC10C1E8C631D77BAE1C61 /* Pods-JPNasaAPODTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -838,7 +700,6 @@
 		};
 		40B6090327983DCE00DBBA96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 532BF7448BC78C2BE1BCFCBD /* Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -861,7 +722,6 @@
 		};
 		40B6090427983DCE00DBBA96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -922,6 +782,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		404405DA279DC03D00EBFA06 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		404405DB279DC03D00EBFA06 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 404405DA279DC03D00EBFA06 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		40B28B26279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld */ = {
