@@ -69,6 +69,7 @@ class ADOTableViewCell: UITableViewCell {
      */
     private func loadImage(url:String?) -> Void {
         self.ytPlayerView.isHidden = true
+        self.aodImageView.image = UIImage(named: "placeholder")!
         guard let url = URL(string: url!) else {return}
         self.aodImageView.load(url: url)
     }
