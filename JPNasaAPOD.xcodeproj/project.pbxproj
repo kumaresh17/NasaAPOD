@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		404405D6279D9ED500EBFA06 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404405D5279D9ED500EBFA06 /* MockApiManager.swift */; };
 		404405DC279DC03D00EBFA06 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 404405DB279DC03D00EBFA06 /* YouTubeiOSPlayerHelper */; };
+		404405DE279DE31100EBFA06 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 404405DD279DE31100EBFA06 /* README.md */; };
 		4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */; };
 		40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1027997A95002666D0 /* HomeViewModel.swift */; };
 		40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1327997EA8002666D0 /* APODResponseModel.swift */; };
@@ -37,7 +38,7 @@
 		40CB2F14279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */; };
 		40CB2F16279AE3A900520DC8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F15279AE3A900520DC8 /* NetworkError.swift */; };
 		40CB2F18279AF0AF00520DC8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */; };
-		40CB2F1A279B6DA700520DC8 /* NasaViewDatePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F19279B6DA700520DC8 /* NasaViewDatePickerExtension.swift */; };
+		40CB2F1A279B6DA700520DC8 /* NasaViewContollerExtensionDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F19279B6DA700520DC8 /* NasaViewContollerExtensionDataPicker.swift */; };
 		40CB2F1C279B79D700520DC8 /* APDOExtensionHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */; };
 		40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		404405D5279D9ED500EBFA06 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
+		404405DD279DE31100EBFA06 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatatStackTest.swift; sourceTree = "<group>"; };
 		40B28B1027997A95002666D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		40B28B1327997EA8002666D0 /* APODResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODResponseModel.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APODEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		40CB2F15279AE3A900520DC8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		40CB2F19279B6DA700520DC8 /* NasaViewDatePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewDatePickerExtension.swift; sourceTree = "<group>"; };
+		40CB2F19279B6DA700520DC8 /* NasaViewContollerExtensionDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewContollerExtensionDataPicker.swift; sourceTree = "<group>"; };
 		40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDOExtensionHelperTest.swift; sourceTree = "<group>"; };
 		40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 		40B608C927983DCB00DBBA96 = {
 			isa = PBXGroup;
 			children = (
+				404405DD279DE31100EBFA06 /* README.md */,
 				40B608D427983DCB00DBBA96 /* JPNasaAPOD */,
 				40B608EB27983DCE00DBBA96 /* JPNasaAPODTests */,
 				40B608F527983DCE00DBBA96 /* JPNasaAPODUITests */,
@@ -225,7 +228,7 @@
 			children = (
 				40B608D927983DCB00DBBA96 /* NasaViewController.swift */,
 				40B28B222799E508002666D0 /* NasaViewControllerDataSource.swift */,
-				40CB2F19279B6DA700520DC8 /* NasaViewDatePickerExtension.swift */,
+				40CB2F19279B6DA700520DC8 /* NasaViewContollerExtensionDataPicker.swift */,
 				40B609072798639500DBBA96 /* ADOTableViewCell.swift */,
 				40B60909279899B900DBBA96 /* PlayerView.swift */,
 			);
@@ -366,6 +369,7 @@
 			files = (
 				40B608E227983DCE00DBBA96 /* LaunchScreen.storyboard in Resources */,
 				40B608DF27983DCE00DBBA96 /* Assets.xcassets in Resources */,
+				404405DE279DE31100EBFA06 /* README.md in Resources */,
 				40B608DD27983DCB00DBBA96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +412,7 @@
 				40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */,
 				40B608D827983DCB00DBBA96 /* SceneDelegate.swift in Sources */,
 				40B28B2E279A44EC002666D0 /* CoreDataStack.swift in Sources */,
-				40CB2F1A279B6DA700520DC8 /* NasaViewDatePickerExtension.swift in Sources */,
+				40CB2F1A279B6DA700520DC8 /* NasaViewContollerExtensionDataPicker.swift in Sources */,
 				40CB2F16279AE3A900520DC8 /* NetworkError.swift in Sources */,
 				40B28B1C2799A99E002666D0 /* NetworkReachabilityManager.swift in Sources */,
 				40B28B232799E508002666D0 /* NasaViewControllerDataSource.swift in Sources */,
