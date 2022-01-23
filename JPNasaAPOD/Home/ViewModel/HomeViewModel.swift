@@ -13,19 +13,19 @@ import CoreData
 
 protocol HomeViewModelProtocol: AnyObject {
     
-    var dataForViewPub: Published<[AODViewModelProtocol]?>.Publisher { get  }
+    var dataForViewPub: Published<[APODModelProtocol]?>.Publisher { get  }
     var errorPub: Published<Error?>.Publisher { get }
     func getAODDataForHomeScreen(apodRequest:APODRequestProtocol) -> Void
-    func mapToViewModelProtocol(managedObject: [APODEntity]?) ->  [AODViewModelProtocol]?
+    func mapToViewModelProtocol(managedObject: [APODEntity]?) ->  [APODModelProtocol]?
 }
 
 class HomeViewModel:HomeViewModelProtocol {
     /**
      Combine Publisher for which we have binded with View
     */
-    @Published var dataForView:[AODViewModelProtocol]?
+    @Published var dataForView:[APODModelProtocol]?
     @Published var error:Error?
-    var dataForViewPub: Published<[AODViewModelProtocol]?>.Publisher {$dataForView}
+    var dataForViewPub: Published<[APODModelProtocol]?>.Publisher {$dataForView}
     var errorPub: Published<Error?>.Publisher {$error}
     var apiModuleProtocol:APIModuleProtocol?
     var apodResourceInteractorProtocol:APODResourceAPIInteractorProtocol?
@@ -46,16 +46,16 @@ class HomeViewModel:HomeViewModelProtocol {
         }
     }
     /**
-     Mapping NSManaged Object to AODViewModelProtocol
-     Avoid using managed objects directly, instead used a AODViewModelProtocol
+     Mapping NSManaged Object to APODModellProtocol
+     Avoid using managed objects directly, instead used a APODModelProtocol
      Prepare Data which is required to display on the View
      */
-    func mapToViewModelProtocol(managedObject: [APODEntity]?) ->  [AODViewModelProtocol]? {
+    func mapToViewModelProtocol(managedObject: [APODEntity]?) ->  [APODModelProtocol]? {
         guard let object:[APODEntity] = managedObject else {
             return nil}
-        var result: [AODViewModelProtocol]? =  [AODViewModelProtocol]()
+        var result: [APODModelProtocol]? =  [APODModelProtocol]()
         _ = object.map {
-            let response = (AODViewModel(title: $0.title, explanation: $0.explanation, mediaSourceURL: $0.url, mediaType: $0.media_type, date: $0.date))
+            let response = (APODModel(title: $0.title, explanation: $0.explanation, mediaSourceURL: $0.url, mediaType: $0.media_type, date: $0.date))
             result?.append(response)
         }
         return result

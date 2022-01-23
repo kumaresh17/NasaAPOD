@@ -68,7 +68,7 @@ typealias APODModelArray = [APODResponseModel]
 /**
  This model protocol object will be used  for home screen view
  */
-protocol AODViewModelProtocol {
+protocol APODModelProtocol {
     var title: String? {get set}
     var explanation: String? {get set}
     var mediaSourceURL: String? {get set}
@@ -76,12 +76,13 @@ protocol AODViewModelProtocol {
     var date: String? {get set}
 }
 
-struct AODViewModel: AODViewModelProtocol {
+struct APODModel: APODModelProtocol {
     var title: String?
     var explanation: String?
     var mediaSourceURL: String?
     var mediaType: String?
     var date: String?
 }
+
 
 

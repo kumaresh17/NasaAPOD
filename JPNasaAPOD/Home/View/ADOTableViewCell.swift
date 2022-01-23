@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
+//import AVKit
+//import AVFoundation
 import YouTubeiOSPlayerHelper
 
 enum MediaType: String{
@@ -39,7 +39,7 @@ class ADOTableViewCell: UITableViewCell {
            Same Cell is been used for both video type and image type, just hiding and showing the type which  we need as per mediaType
            Having seperate cell views just for two media type might be overhead on the memory , so considered having just one cell view.
      */
-    func configureCell(with APODData: AODViewModelProtocol) -> Void {
+    func configureCell(with APODData: APODModelProtocol) -> Void {
         titleLabel.text = APODData.title
         explanationLabel.text = APODData.explanation
         dateLabel.text = APODData.date?.convertToMonthDayYear()
@@ -50,7 +50,7 @@ class ADOTableViewCell: UITableViewCell {
         }
     }
     /**
-         Third party Pod is been used to load and play Youtube video
+         Third party Google youtube SPM is been used  to load and play Youtube video
      */
     private func loadYouTubeVideo(videoSourceUrl:String?) -> Void {
         self.ytPlayerView.isHidden = false
@@ -78,12 +78,12 @@ class ADOTableViewCell: UITableViewCell {
     /**
         This method is not used but just for reference  in case we have to implement AVPlayer for other videos type other than Youtube videos
      */
-    private func loadVideo() -> Void {
-        
-        guard let url = URL(string: "https://www.youtube.com/embed/25FfQ9MEQE8") else { return}
-        let avPlayer = AVPlayer(url: url)
-        playerView.playerLayer.player = avPlayer
-        playerView.player?.play()
-    }
+//    private func loadVideo() -> Void {
+//        
+//        guard let url = URL(string: "https://www.youtube.com/embed/25FfQ9MEQE8") else { return}
+//        let avPlayer = AVPlayer(url: url)
+//        playerView.playerLayer.player = avPlayer
+//        playerView.player?.play()
+//    }
 
 }

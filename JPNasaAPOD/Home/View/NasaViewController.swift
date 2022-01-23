@@ -8,12 +8,12 @@
 import UIKit
 import Combine
 
-class JPNasaViewController: UIViewController {
+class NasaViewController: UIViewController {
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var viewModelProtocol:HomeViewModelProtocol?
-    var apodviewModelProtocol: [AODViewModelProtocol]?
+    var apodModelProtocol: [APODModelProtocol]?
     var anyCancelable = Set<AnyCancellable>()
     lazy var datePicker = UIDatePicker()
     
@@ -40,7 +40,7 @@ class JPNasaViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink {[weak self] (dataView) in
                 guard let dataView = dataView else {return}
-                self?.apodviewModelProtocol = dataView
+                self?.apodModelProtocol = dataView
                 self?.tableView.reloadData()
                 ActivityIndicator.stopActivityIndicator()
             }

@@ -211,7 +211,7 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
         /// Perform save to core data and fetch to check
         CoreDataStack.shared.saveToMainContext(managedObjectContext: (self.coreDataStackTest.mainContext))
         let aopdData = CoreDataStack.shared.fetchFromCoreData(name: APODEntity.self, managedObjectContext:(self.coreDataStackTest.mainContext))
-        let result:[AODViewModelProtocol] = (homeScreenModelProtocol?.mapToViewModelProtocol(managedObject: aopdData))!
+        let result:[APODModelProtocol] = (homeScreenModelProtocol?.mapToViewModelProtocol(managedObject: aopdData))!
         XCTAssertNotNil(result)
         XCTAssertGreaterThan(result.count, 0)
         XCTAssertEqual( result[0].title, "Orion over the Austrian Alps")

@@ -12,7 +12,7 @@ import UIKit
 /**
  This extension is used for just to show Date picker and bind with UiTextField and handle the user interaction of done and cancel.
  */
-extension JPNasaViewController {
+extension NasaViewController {
     
     func setUpDatePicker() {
         //Formate Date

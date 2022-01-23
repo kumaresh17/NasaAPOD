@@ -17,13 +17,13 @@
 		40B28B1C2799A99E002666D0 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */; };
 		40B28B1E2799A9E7002666D0 /* HomePayLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1D2799A9E7002666D0 /* HomePayLoad.swift */; };
 		40B28B212799DC2D002666D0 /* APODResourceAPIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */; };
-		40B28B232799E508002666D0 /* JPNasaViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B222799E508002666D0 /* JPNasaViewControllerDataSource.swift */; };
+		40B28B232799E508002666D0 /* NasaViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B222799E508002666D0 /* NasaViewControllerDataSource.swift */; };
 		40B28B25279A3B0E002666D0 /* APODRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B24279A3B0E002666D0 /* APODRequestModel.swift */; };
 		40B28B28279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B26279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld */; };
 		40B28B2E279A44EC002666D0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B2D279A44EC002666D0 /* CoreDataStack.swift */; };
 		40B608D627983DCB00DBBA96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D527983DCB00DBBA96 /* AppDelegate.swift */; };
 		40B608D827983DCB00DBBA96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D727983DCB00DBBA96 /* SceneDelegate.swift */; };
-		40B608DA27983DCB00DBBA96 /* JPNasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D927983DCB00DBBA96 /* JPNasaViewController.swift */; };
+		40B608DA27983DCB00DBBA96 /* NasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D927983DCB00DBBA96 /* NasaViewController.swift */; };
 		40B608DD27983DCB00DBBA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B608DB27983DCB00DBBA96 /* Main.storyboard */; };
 		40B608DF27983DCE00DBBA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B608DE27983DCE00DBBA96 /* Assets.xcassets */; };
 		40B608E227983DCE00DBBA96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B608E027983DCE00DBBA96 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		40CB2F14279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */; };
 		40CB2F16279AE3A900520DC8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F15279AE3A900520DC8 /* NetworkError.swift */; };
 		40CB2F18279AF0AF00520DC8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */; };
-		40CB2F1A279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */; };
+		40CB2F1A279B6DA700520DC8 /* NasaViewDatePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F19279B6DA700520DC8 /* NasaViewDatePickerExtension.swift */; };
 		40CB2F1C279B79D700520DC8 /* APDOExtensionHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */; };
 		40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -69,14 +69,14 @@
 		40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		40B28B1D2799A9E7002666D0 /* HomePayLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePayLoad.swift; sourceTree = "<group>"; };
 		40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODResourceAPIInteractor.swift; sourceTree = "<group>"; };
-		40B28B222799E508002666D0 /* JPNasaViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewControllerDataSource.swift; sourceTree = "<group>"; };
+		40B28B222799E508002666D0 /* NasaViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewControllerDataSource.swift; sourceTree = "<group>"; };
 		40B28B24279A3B0E002666D0 /* APODRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODRequestModel.swift; sourceTree = "<group>"; };
 		40B28B27279A42EA002666D0 /* JPNasaAPOD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JPNasaAPOD.xcdatamodel; sourceTree = "<group>"; };
 		40B28B2D279A44EC002666D0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		40B608D227983DCB00DBBA96 /* JPNasaAPOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPNasaAPOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B608D527983DCB00DBBA96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B608D727983DCB00DBBA96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		40B608D927983DCB00DBBA96 /* JPNasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewController.swift; sourceTree = "<group>"; };
+		40B608D927983DCB00DBBA96 /* NasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewController.swift; sourceTree = "<group>"; };
 		40B608DC27983DCB00DBBA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40B608DE27983DCE00DBBA96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B608E127983DCE00DBBA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APODEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		40CB2F15279AE3A900520DC8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewDatePickerExtension.swift; sourceTree = "<group>"; };
+		40CB2F19279B6DA700520DC8 /* NasaViewDatePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewDatePickerExtension.swift; sourceTree = "<group>"; };
 		40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDOExtensionHelperTest.swift; sourceTree = "<group>"; };
 		40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,9 +223,9 @@
 		40B609062798636700DBBA96 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				40B608D927983DCB00DBBA96 /* JPNasaViewController.swift */,
-				40B28B222799E508002666D0 /* JPNasaViewControllerDataSource.swift */,
-				40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */,
+				40B608D927983DCB00DBBA96 /* NasaViewController.swift */,
+				40B28B222799E508002666D0 /* NasaViewControllerDataSource.swift */,
+				40CB2F19279B6DA700520DC8 /* NasaViewDatePickerExtension.swift */,
 				40B609072798639500DBBA96 /* ADOTableViewCell.swift */,
 				40B60909279899B900DBBA96 /* PlayerView.swift */,
 			);
@@ -397,7 +397,7 @@
 				40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */,
 				40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */,
 				40CB2F13279AC5C200520DC8 /* APODEntity+CoreDataClass.swift in Sources */,
-				40B608DA27983DCB00DBBA96 /* JPNasaViewController.swift in Sources */,
+				40B608DA27983DCB00DBBA96 /* NasaViewController.swift in Sources */,
 				40B28B1627997ED2002666D0 /* ApiManager.swift in Sources */,
 				40CB2F18279AF0AF00520DC8 /* AlertViewController.swift in Sources */,
 				40B28B212799DC2D002666D0 /* APODResourceAPIInteractor.swift in Sources */,
@@ -408,10 +408,10 @@
 				40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */,
 				40B608D827983DCB00DBBA96 /* SceneDelegate.swift in Sources */,
 				40B28B2E279A44EC002666D0 /* CoreDataStack.swift in Sources */,
-				40CB2F1A279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift in Sources */,
+				40CB2F1A279B6DA700520DC8 /* NasaViewDatePickerExtension.swift in Sources */,
 				40CB2F16279AE3A900520DC8 /* NetworkError.swift in Sources */,
 				40B28B1C2799A99E002666D0 /* NetworkReachabilityManager.swift in Sources */,
-				40B28B232799E508002666D0 /* JPNasaViewControllerDataSource.swift in Sources */,
+				40B28B232799E508002666D0 /* NasaViewControllerDataSource.swift in Sources */,
 				40CB2F14279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift in Sources */,
 				40B28B25279A3B0E002666D0 /* APODRequestModel.swift in Sources */,
 			);
