@@ -5,7 +5,6 @@
 //  Created by kumaresh shrivastava on 21/01/2022.
 //
 
-import Foundation
 import UIKit
 
 protocol AlertDelegate {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404405D6279D9ED500EBFA06 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404405D5279D9ED500EBFA06 /* MockApiManager.swift */; };
 		4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */; };
 		40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1027997A95002666D0 /* HomeViewModel.swift */; };
 		40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1327997EA8002666D0 /* APODResponseModel.swift */; };
@@ -25,7 +26,7 @@
 		40B608DD27983DCB00DBBA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B608DB27983DCB00DBBA96 /* Main.storyboard */; };
 		40B608DF27983DCE00DBBA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B608DE27983DCE00DBBA96 /* Assets.xcassets */; };
 		40B608E227983DCE00DBBA96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B608E027983DCE00DBBA96 /* LaunchScreen.storyboard */; };
-		40B608ED27983DCE00DBBA96 /* JPNasaAPODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608EC27983DCE00DBBA96 /* JPNasaAPODTests.swift */; };
+		40B608ED27983DCE00DBBA96 /* NasaAPODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608EC27983DCE00DBBA96 /* NasaAPODTests.swift */; };
 		40B608F727983DCE00DBBA96 /* JPNasaAPODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608F627983DCE00DBBA96 /* JPNasaAPODUITests.swift */; };
 		40B608F927983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608F827983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift */; };
 		40B609082798639500DBBA96 /* ADOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B609072798639500DBBA96 /* ADOTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPODTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD.debug.xcconfig"; sourceTree = "<group>"; };
+		404405D5279D9ED500EBFA06 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatatStackTest.swift; sourceTree = "<group>"; };
 		40B28B1027997A95002666D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		40B28B1327997EA8002666D0 /* APODResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODResponseModel.swift; sourceTree = "<group>"; };
@@ -86,7 +88,7 @@
 		40B608E127983DCE00DBBA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40B608E327983DCE00DBBA96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B608E827983DCE00DBBA96 /* JPNasaAPODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPNasaAPODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40B608EC27983DCE00DBBA96 /* JPNasaAPODTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaAPODTests.swift; sourceTree = "<group>"; };
+		40B608EC27983DCE00DBBA96 /* NasaAPODTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPODTests.swift; sourceTree = "<group>"; };
 		40B608F227983DCE00DBBA96 /* JPNasaAPODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPNasaAPODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B608F627983DCE00DBBA96 /* JPNasaAPODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaAPODUITests.swift; sourceTree = "<group>"; };
 		40B608F827983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaAPODUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -206,9 +208,10 @@
 		40B608EB27983DCE00DBBA96 /* JPNasaAPODTests */ = {
 			isa = PBXGroup;
 			children = (
-				40B608EC27983DCE00DBBA96 /* JPNasaAPODTests.swift */,
-				40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */,
+				404405D5279D9ED500EBFA06 /* MockApiManager.swift */,
 				4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */,
+				40B608EC27983DCE00DBBA96 /* NasaAPODTests.swift */,
+				40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */,
 			);
 			path = JPNasaAPODTests;
 			sourceTree = "<group>";
@@ -559,8 +562,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				40CB2F1C279B79D700520DC8 /* APDOExtensionHelperTest.swift in Sources */,
+				404405D6279D9ED500EBFA06 /* MockApiManager.swift in Sources */,
 				4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */,
-				40B608ED27983DCE00DBBA96 /* JPNasaAPODTests.swift in Sources */,
+				40B608ED27983DCE00DBBA96 /* NasaAPODTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

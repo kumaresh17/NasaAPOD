@@ -78,8 +78,8 @@
             filePath = "JPNasaAPOD/Helpers/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "beginListeningNetworkReachability()"
             landmarkType = "7">
          </BreakpointContent>
@@ -146,189 +146,6 @@
             endingLineNumber = "43"
             landmarkName = "getAPODDataRespose(completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "69B694D7-F408-411B-9490-A120930DBA03"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JPNasaAPODTests/JPNasaAPODTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "test_apod_dataresponse_success()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a3fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a322"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a301"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a4a6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "150">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a468"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "303">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a409"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "303">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a5ae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "303">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 4190f44da391a58d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.testAPODDataResponse() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "150">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 6047fa0c21a295c4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.test_apod_dataresponse_success() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "303">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 6047fa0c21a294ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.test_apod_dataresponse_success() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "303">
-               </Location>
-               <Location
-                  uuid = "69B694D7-F408-411B-9490-A120930DBA03 - 6047fa0c21a2950a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;JPNasaAPOD.APODEntity&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.test_apod_dataresponse_success() -&gt; ()"
-                  moduleName = "JPNasaAPODTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "303">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -408,53 +225,35 @@
                   endingLineNumber = "47"
                   offsetFromSymbolStart = "1328">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BB5D50F9-18DD-41F7-85DC-5588A9680A84"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JPNasaAPODTests/JPNasaAPODTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "test_save_fetch_to_coreData()"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "BB5D50F9-18DD-41F7-85DC-5588A9680A84 - a2df94d4c67d0f3d"
+                  uuid = "D5FF7748-73AE-4F4F-AA55-61FFB5367670 - a4555ec36bf01348"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;JPNasaAPOD.APODResponseModel&gt;, Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.test_save_to_coreData() -&gt; ()"
+                  symbolName = "JPNasaAPODTests.JPNasaAPODTests.test_format_https_payLoad() -&gt; ()"
                   moduleName = "JPNasaAPODTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "257">
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "328">
                </Location>
                <Location
-                  uuid = "BB5D50F9-18DD-41F7-85DC-5588A9680A84 - cc57176816b4122e"
+                  uuid = "D5FF7748-73AE-4F4F-AA55-61FFB5367670 - a4555ec36bf0148a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;JPNasaAPOD.APODResponseModel&gt;, Swift.Error&gt;) -&gt; () in JPNasaAPODTests.JPNasaAPODTests.test_save_fetch_to_coreData() -&gt; ()"
+                  symbolName = "JPNasaAPODTests.JPNasaAPODTests.test_format_https_payLoad() -&gt; ()"
                   moduleName = "JPNasaAPODTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPODTests/JPNasaAPODTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "257">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "328">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -462,32 +261,304 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8267AD3C-6DEE-4995-9E03-30A6A0E52006"
+            uuid = "6B96E5A6-0E13-4698-A5C8-417562F08A54"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JPNasaAPODTests/JPNasaAPODTests.swift"
+            filePath = "JPNasaAPOD/Home/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "test_save_clear_alldata_from_coreData()"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "mapToViewModelProtocol(managedObject:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "94669404-0E61-4769-97C2-A96695C8C34A"
+            uuid = "814D8DBD-4683-4971-91DF-BEE046681024"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/MockAPODApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "decodeDataResponse(data:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57DB1CCB-9C1C-4B41-8727-26B3CEE262A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/MockAPODApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getAODInfo(payload:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E473E3D-1DB8-4C27-B1AF-3184CB2030B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/MockAPODApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "sendRequest(payLoad:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB8CB681-1E62-480D-B099-07E1FA50BC03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/MockAPODApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "sendRequest(payLoad:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0279AB4A-5DE0-4B64-A390-0EA5A11D7AFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/JPNasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "test_mock_apod_api_dataresponse_success()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D5DD899-C92B-41A9-9AF7-74E928E21CD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/JPNasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "test_mock_apod_api_dataresponse_success()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95399448-2945-4FB6-B5E5-BE3838F810B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/JPNasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "test_mock_apod_api_dataresponse_success()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E93A5A2D-F23E-46D7-90D3-E7FC698A4CE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/MockAPODApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "decodeDataResponse(data:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E16CC735-08B5-4BBB-81D8-3525563A3DA9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/NasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "test_mock_apod_api_dataresponse_failure()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C45E712-ADC8-4648-99B9-8672871A5CCB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/NasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "test_mock_apod_api_dataresponse_failure()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C50BFDFF-165C-4CDE-A21A-5DC6E05D29D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/NasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "test_mock_apod_api_dataresponse_failure()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1A4E736-EE9D-4D32-AA60-D5F6C3792D90"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JPNasaAPOD/Helpers/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "sendRequest(payLoad:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65DE8231-9CC5-4C92-88E7-387AB05FD181"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPOD/Helpers/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "sendRequest(payLoad:managedObjectContext:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "65DE8231-9CC5-4C92-88E7-387AB05FD181 - f15ee6128997ec1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 () -&gt; () in closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPOD.ApiManager.sendRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(payLoad: JPNasaAPOD.HTTPPayloadProtocol, managedObjectContext: Swift.Optional&lt;__C.NSManagedObjectContext&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "JPNasaAPOD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPOD/Helpers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "313">
+               </Location>
+               <Location
+                  uuid = "65DE8231-9CC5-4C92-88E7-387AB05FD181 - c9a29af13a89a786"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #5 () -&gt; () in closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JPNasaAPOD.ApiManager.sendRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(payLoad: JPNasaAPOD.HTTPPayloadProtocol, managedObjectContext: Swift.Optional&lt;__C.NSManagedObjectContext&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "JPNasaAPOD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kumareshshrivastava/Desktop/Imp_Doc/JPMorgon/JPNasaAPOD/JPNasaAPOD/Helpers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "195">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25B10835-E717-429F-914B-89353067F20F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPOD/Helpers/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "decodeDataResponse(data:managedObjectContext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAC85673-CA46-437C-93EB-CD237258E4DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/NasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "test_mock_apod_api_dataresponse_success()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43F218A5-E9B9-4936-A482-339C15E74256"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPNasaAPODTests/NasaAPODTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "test_mock_apod_api_dataresponse_success()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-// MARK: - AOD Model
+// MARK: - APOD Model
 class APODResponseModel: NSManagedObject,Codable {
    
     enum CodingKeys: String, CodingKey {

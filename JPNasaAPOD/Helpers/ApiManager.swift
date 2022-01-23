@@ -17,7 +17,8 @@ protocol ApiServiceProtocol :AnyObject {
 protocol ApiManagerProtocol: AnyObject {
     
     func getAODInfo(payload: HTTPPayloadProtocol, managedObjectContext:NSManagedObjectContext?,completion: @escaping (Result<APODModelArray,Error>) -> Void)
-    func decodeDataResponse(data:Data,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<APODModelArray,Error>) -> Void) -> Void 
+    func decodeDataResponse(data:Data,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<APODModelArray,Error>) -> Void) -> Void
+    func sendRequest<T:Codable>(payLoad:HTTPPayloadProtocol,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<T,Error>) -> Void)
 }
 
 extension ApiManager: ApiManagerProtocol {
@@ -82,14 +83,13 @@ class ApiManager: ApiServiceProtocol {
         DispatchQueue.main.async {
             AlertViewController.showAlert(withTitle: "Alert", message: "No Internet Connection")
         }
-
     }
     
     public convenience init() {
         self.init(urlSession: URLSession.shared)
     }
     
-    private func sendRequest<T:Codable>(payLoad:HTTPPayloadProtocol,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<T,Error>) -> Void) {
+    func sendRequest<T:Codable>(payLoad:HTTPPayloadProtocol,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<T,Error>) -> Void) {
       
         if let requestUrl =  payLoad.url {
             var urlRequest = URLRequest(url: requestUrl)
@@ -121,21 +121,23 @@ class ApiManager: ApiServiceProtocol {
                     }
                     return }
                 guard let managedObjectContext = managedObjectContext else {
-                    completion(.failure(NetworkError.coreDataError))
-                    return}
-                managedObjectContext.perform {
-                    CoreDataStack.shared.clearStorage(name: APODEntity.self,managedObjectContext: managedObjectContext)
-                }
-                self?.decodeDataResponse(data: data, managedObjectContext: managedObjectContext, completion: { result in
                     DispatchQueue.main.async {
-                        switch result {
-                        case .success(let responseData):
-                            completion(.success(responseData as! T))
-                        case .failure(let error):
-                            completion(.failure(error))
-                        }
+                        completion(.failure(NetworkError.coreDataError))
                     }
-                })
+                    return}
+                    
+                DispatchQueue.global(qos: .background).async {
+                    managedObjectContext.perform {
+                        CoreDataStack.shared.clearStorage(name: APODEntity.self,managedObjectContext: managedObjectContext)
+                        self?.decodeDataResponse(data: data, managedObjectContext: managedObjectContext, completion: { result in
+                            switch result {
+                            case .success(let responseData):
+                                completion(.success(responseData as! T))
+                            case .failure(let error):
+                                completion(.failure(error))
+                            }
+                        })
+                    }}
             })
             task?.resume()
         }
@@ -144,28 +146,24 @@ class ApiManager: ApiServiceProtocol {
     /**
            Deocode the data response to core data model
      */
-    
-     func decodeDataResponse(data:Data,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<APODModelArray,Error>) -> Void) -> Void {
+    func decodeDataResponse(data:Data,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<APODModelArray,Error>) -> Void) -> Void {
         
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
             completion(.failure(NetworkError.coreDataError))
             return
         }
-        DispatchQueue.global(qos: .background).async {
-            managedObjectContext!.perform {
-                let result: Result<APODModelArray, Error>
-                let decoder = JSONDecoder()
-                decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
-                do {
-                    let response = try decoder.decode(APODModelArray.self, from: data)
-                    result = .success(response)
-                }
-                catch let error {
-                    result = .failure(error)
-                }
-                completion(result)
-            }
+        
+        let result: Result<APODModelArray, Error>
+        let decoder = JSONDecoder()
+        decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
+        do {
+            let response = try decoder.decode(APODModelArray.self, from: data)
+            result = .success(response)
         }
+        catch let error {
+            result = .failure(error)
+        }
+        completion(result)
     }
     
 }
