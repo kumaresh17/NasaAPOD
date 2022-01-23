@@ -1,0 +1,6 @@
+framework module Pods_JPNasaAPOD_JPNasaAPODUITests {
+  umbrella header "Pods-JPNasaAPOD-JPNasaAPODUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

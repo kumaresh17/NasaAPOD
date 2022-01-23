@@ -1,0 +1,936 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */; };
+		40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1027997A95002666D0 /* HomeViewModel.swift */; };
+		40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1327997EA8002666D0 /* APODResponseModel.swift */; };
+		40B28B1627997ED2002666D0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1527997ED2002666D0 /* ApiManager.swift */; };
+		40B28B1A2799A978002666D0 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B192799A978002666D0 /* URLSessionProtocol.swift */; };
+		40B28B1C2799A99E002666D0 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */; };
+		40B28B1E2799A9E7002666D0 /* HomePayLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1D2799A9E7002666D0 /* HomePayLoad.swift */; };
+		40B28B212799DC2D002666D0 /* APODResourceAPIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */; };
+		40B28B232799E508002666D0 /* JPNasaViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B222799E508002666D0 /* JPNasaViewControllerDataSource.swift */; };
+		40B28B25279A3B0E002666D0 /* APODRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B24279A3B0E002666D0 /* APODRequestModel.swift */; };
+		40B28B28279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B26279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld */; };
+		40B28B2E279A44EC002666D0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B2D279A44EC002666D0 /* CoreDataStack.swift */; };
+		40B608D627983DCB00DBBA96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D527983DCB00DBBA96 /* AppDelegate.swift */; };
+		40B608D827983DCB00DBBA96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D727983DCB00DBBA96 /* SceneDelegate.swift */; };
+		40B608DA27983DCB00DBBA96 /* JPNasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608D927983DCB00DBBA96 /* JPNasaViewController.swift */; };
+		40B608DD27983DCB00DBBA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B608DB27983DCB00DBBA96 /* Main.storyboard */; };
+		40B608DF27983DCE00DBBA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B608DE27983DCE00DBBA96 /* Assets.xcassets */; };
+		40B608E227983DCE00DBBA96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B608E027983DCE00DBBA96 /* LaunchScreen.storyboard */; };
+		40B608ED27983DCE00DBBA96 /* JPNasaAPODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608EC27983DCE00DBBA96 /* JPNasaAPODTests.swift */; };
+		40B608F727983DCE00DBBA96 /* JPNasaAPODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608F627983DCE00DBBA96 /* JPNasaAPODUITests.swift */; };
+		40B608F927983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B608F827983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift */; };
+		40B609082798639500DBBA96 /* ADOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B609072798639500DBBA96 /* ADOTableViewCell.swift */; };
+		40B6090A279899B900DBBA96 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B60909279899B900DBBA96 /* PlayerView.swift */; };
+		40B6090D2798D2D000DBBA96 /* ExtensionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6090C2798D2D000DBBA96 /* ExtensionHelper.swift */; };
+		40CB2F13279AC5C200520DC8 /* APODEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F11279AC5C200520DC8 /* APODEntity+CoreDataClass.swift */; };
+		40CB2F14279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */; };
+		40CB2F16279AE3A900520DC8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F15279AE3A900520DC8 /* NetworkError.swift */; };
+		40CB2F18279AF0AF00520DC8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */; };
+		40CB2F1A279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */; };
+		40CB2F1C279B79D700520DC8 /* APDOExtensionHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */; };
+		40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */; };
+		AFF3A5232628B475E59A1308 /* Pods_JPNasaAPOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7061FFBE15FA29214CCB8EB9 /* Pods_JPNasaAPOD.framework */; };
+		B4216C8C703EC4535D727C26 /* Pods_JPNasaAPODTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */; };
+		F88B6E42598F9A145AEC2756 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BF63C4906E00DAE107B755 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40B608E927983DCE00DBBA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40B608CA27983DCB00DBBA96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40B608D127983DCB00DBBA96;
+			remoteInfo = JPNasaAPOD;
+		};
+		40B608F327983DCE00DBBA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40B608CA27983DCB00DBBA96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40B608D127983DCB00DBBA96;
+			remoteInfo = JPNasaAPOD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FDC10C1E8C631D77BAE1C61 /* Pods-JPNasaAPODTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPODTests.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPODTests/Pods-JPNasaAPODTests.release.xcconfig"; sourceTree = "<group>"; };
+		1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig"; sourceTree = "<group>"; };
+		15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPODTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD.debug.xcconfig"; sourceTree = "<group>"; };
+		4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatatStackTest.swift; sourceTree = "<group>"; };
+		40B28B1027997A95002666D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		40B28B1327997EA8002666D0 /* APODResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODResponseModel.swift; sourceTree = "<group>"; };
+		40B28B1527997ED2002666D0 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		40B28B192799A978002666D0 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		40B28B1D2799A9E7002666D0 /* HomePayLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePayLoad.swift; sourceTree = "<group>"; };
+		40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODResourceAPIInteractor.swift; sourceTree = "<group>"; };
+		40B28B222799E508002666D0 /* JPNasaViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewControllerDataSource.swift; sourceTree = "<group>"; };
+		40B28B24279A3B0E002666D0 /* APODRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODRequestModel.swift; sourceTree = "<group>"; };
+		40B28B27279A42EA002666D0 /* JPNasaAPOD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JPNasaAPOD.xcdatamodel; sourceTree = "<group>"; };
+		40B28B2D279A44EC002666D0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		40B608D227983DCB00DBBA96 /* JPNasaAPOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPNasaAPOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B608D527983DCB00DBBA96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40B608D727983DCB00DBBA96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		40B608D927983DCB00DBBA96 /* JPNasaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewController.swift; sourceTree = "<group>"; };
+		40B608DC27983DCB00DBBA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40B608DE27983DCE00DBBA96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40B608E127983DCE00DBBA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40B608E327983DCE00DBBA96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B608E827983DCE00DBBA96 /* JPNasaAPODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPNasaAPODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B608EC27983DCE00DBBA96 /* JPNasaAPODTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaAPODTests.swift; sourceTree = "<group>"; };
+		40B608F227983DCE00DBBA96 /* JPNasaAPODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPNasaAPODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B608F627983DCE00DBBA96 /* JPNasaAPODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaAPODUITests.swift; sourceTree = "<group>"; };
+		40B608F827983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaAPODUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		40B609072798639500DBBA96 /* ADOTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADOTableViewCell.swift; sourceTree = "<group>"; };
+		40B60909279899B900DBBA96 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		40B6090C2798D2D000DBBA96 /* ExtensionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelper.swift; sourceTree = "<group>"; };
+		40CB2F11279AC5C200520DC8 /* APODEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APODEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APODEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		40CB2F15279AE3A900520DC8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPNasaViewDatePickerExtension.swift; sourceTree = "<group>"; };
+		40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDOExtensionHelperTest.swift; sourceTree = "<group>"; };
+		40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		532BF7448BC78C2BE1BCFCBD /* Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7061FFBE15FA29214CCB8EB9 /* Pods_JPNasaAPOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E39B97850398531E58EC911 /* Pods-JPNasaAPOD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPOD.release.xcconfig"; path = "Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD.release.xcconfig"; sourceTree = "<group>"; };
+		BF4C9AEE6830286BCDF7C69A /* Pods-JPNasaAPODTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPNasaAPODTests.debug.xcconfig"; path = "Target Support Files/Pods-JPNasaAPODTests/Pods-JPNasaAPODTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0BF63C4906E00DAE107B755 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPNasaAPOD_JPNasaAPODUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40B608CF27983DCB00DBBA96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF3A5232628B475E59A1308 /* Pods_JPNasaAPOD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B608E527983DCE00DBBA96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4216C8C703EC4535D727C26 /* Pods_JPNasaAPODTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B608EF27983DCE00DBBA96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88B6E42598F9A145AEC2756 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4086CFE6279C31E70088C915 /* UI Helper */ = {
+			isa = PBXGroup;
+			children = (
+				40CB2F17279AF0AF00520DC8 /* AlertViewController.swift */,
+				40CB2F1D279B809800520DC8 /* ActivityIndicator.swift */,
+			);
+			path = "UI Helper";
+			sourceTree = "<group>";
+		};
+		40B28B1227997E76002666D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40CB2F11279AC5C200520DC8 /* APODEntity+CoreDataClass.swift */,
+				40CB2F12279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift */,
+				40B28B24279A3B0E002666D0 /* APODRequestModel.swift */,
+				40B28B1327997EA8002666D0 /* APODResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40B28B1F2799DBD1002666D0 /* DataAPIInterator */ = {
+			isa = PBXGroup;
+			children = (
+				40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */,
+				40B28B2D279A44EC002666D0 /* CoreDataStack.swift */,
+				40CB2F15279AE3A900520DC8 /* NetworkError.swift */,
+			);
+			path = DataAPIInterator;
+			sourceTree = "<group>";
+		};
+		40B608C927983DCB00DBBA96 = {
+			isa = PBXGroup;
+			children = (
+				40B608D427983DCB00DBBA96 /* JPNasaAPOD */,
+				40B608EB27983DCE00DBBA96 /* JPNasaAPODTests */,
+				40B608F527983DCE00DBBA96 /* JPNasaAPODUITests */,
+				40B608D327983DCB00DBBA96 /* Products */,
+				678D7C4DC6BF86B387CA6522 /* Pods */,
+				E4832CA9BED24CB932A31A57 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40B608D327983DCB00DBBA96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40B608D227983DCB00DBBA96 /* JPNasaAPOD.app */,
+				40B608E827983DCE00DBBA96 /* JPNasaAPODTests.xctest */,
+				40B608F227983DCE00DBBA96 /* JPNasaAPODUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40B608D427983DCB00DBBA96 /* JPNasaAPOD */ = {
+			isa = PBXGroup;
+			children = (
+				40B608D527983DCB00DBBA96 /* AppDelegate.swift */,
+				40B608D727983DCB00DBBA96 /* SceneDelegate.swift */,
+				40B6090B2798D2B000DBBA96 /* Helpers */,
+				40B609052798635A00DBBA96 /* Home */,
+				40B608DB27983DCB00DBBA96 /* Main.storyboard */,
+				40B608DE27983DCE00DBBA96 /* Assets.xcassets */,
+				40B608E027983DCE00DBBA96 /* LaunchScreen.storyboard */,
+				40B608E327983DCE00DBBA96 /* Info.plist */,
+				40B28B26279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld */,
+			);
+			path = JPNasaAPOD;
+			sourceTree = "<group>";
+		};
+		40B608EB27983DCE00DBBA96 /* JPNasaAPODTests */ = {
+			isa = PBXGroup;
+			children = (
+				40B608EC27983DCE00DBBA96 /* JPNasaAPODTests.swift */,
+				40CB2F1B279B79D700520DC8 /* APDOExtensionHelperTest.swift */,
+				4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */,
+			);
+			path = JPNasaAPODTests;
+			sourceTree = "<group>";
+		};
+		40B608F527983DCE00DBBA96 /* JPNasaAPODUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40B608F627983DCE00DBBA96 /* JPNasaAPODUITests.swift */,
+				40B608F827983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift */,
+			);
+			path = JPNasaAPODUITests;
+			sourceTree = "<group>";
+		};
+		40B609052798635A00DBBA96 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				40B28B1227997E76002666D0 /* Model */,
+				40B6090E2798DDA100DBBA96 /* ViewModel */,
+				40B609062798636700DBBA96 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		40B609062798636700DBBA96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40B608D927983DCB00DBBA96 /* JPNasaViewController.swift */,
+				40B28B222799E508002666D0 /* JPNasaViewControllerDataSource.swift */,
+				40CB2F19279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift */,
+				40B609072798639500DBBA96 /* ADOTableViewCell.swift */,
+				40B60909279899B900DBBA96 /* PlayerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40B6090B2798D2B000DBBA96 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4086CFE6279C31E70088C915 /* UI Helper */,
+				40B28B1F2799DBD1002666D0 /* DataAPIInterator */,
+				40B6090C2798D2D000DBBA96 /* ExtensionHelper.swift */,
+				40B28B1527997ED2002666D0 /* ApiManager.swift */,
+				40B28B192799A978002666D0 /* URLSessionProtocol.swift */,
+				40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */,
+				40B28B1D2799A9E7002666D0 /* HomePayLoad.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		40B6090E2798DDA100DBBA96 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40B28B1027997A95002666D0 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		678D7C4DC6BF86B387CA6522 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */,
+				7E39B97850398531E58EC911 /* Pods-JPNasaAPOD.release.xcconfig */,
+				532BF7448BC78C2BE1BCFCBD /* Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig */,
+				1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */,
+				BF4C9AEE6830286BCDF7C69A /* Pods-JPNasaAPODTests.debug.xcconfig */,
+				0FDC10C1E8C631D77BAE1C61 /* Pods-JPNasaAPODTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4832CA9BED24CB932A31A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7061FFBE15FA29214CCB8EB9 /* Pods_JPNasaAPOD.framework */,
+				D0BF63C4906E00DAE107B755 /* Pods_JPNasaAPOD_JPNasaAPODUITests.framework */,
+				15211EDE786BBBDF74FF7249 /* Pods_JPNasaAPODTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40B608D127983DCB00DBBA96 /* JPNasaAPOD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40B608FC27983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPOD" */;
+			buildPhases = (
+				978A577F4413E9CD292640E7 /* [CP] Check Pods Manifest.lock */,
+				40B608CE27983DCB00DBBA96 /* Sources */,
+				40B608CF27983DCB00DBBA96 /* Frameworks */,
+				40B608D027983DCB00DBBA96 /* Resources */,
+				51566661BC1B38B92CCC47FE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPNasaAPOD;
+			productName = JPNasaAPOD;
+			productReference = 40B608D227983DCB00DBBA96 /* JPNasaAPOD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40B608E727983DCE00DBBA96 /* JPNasaAPODTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40B608FF27983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPODTests" */;
+			buildPhases = (
+				7AD1747497A89B6076F8CB2E /* [CP] Check Pods Manifest.lock */,
+				40B608E427983DCE00DBBA96 /* Sources */,
+				40B608E527983DCE00DBBA96 /* Frameworks */,
+				40B608E627983DCE00DBBA96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40B608EA27983DCE00DBBA96 /* PBXTargetDependency */,
+			);
+			name = JPNasaAPODTests;
+			productName = JPNasaAPODTests;
+			productReference = 40B608E827983DCE00DBBA96 /* JPNasaAPODTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40B608F127983DCE00DBBA96 /* JPNasaAPODUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40B6090227983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPODUITests" */;
+			buildPhases = (
+				E8EFED54701E7A956B21C3A7 /* [CP] Check Pods Manifest.lock */,
+				40B608EE27983DCE00DBBA96 /* Sources */,
+				40B608EF27983DCE00DBBA96 /* Frameworks */,
+				40B608F027983DCE00DBBA96 /* Resources */,
+				421AF11E739EBFE6A9F2CF96 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40B608F427983DCE00DBBA96 /* PBXTargetDependency */,
+			);
+			name = JPNasaAPODUITests;
+			productName = JPNasaAPODUITests;
+			productReference = 40B608F227983DCE00DBBA96 /* JPNasaAPODUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40B608CA27983DCB00DBBA96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					40B608D127983DCB00DBBA96 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					40B608E727983DCE00DBBA96 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 40B608D127983DCB00DBBA96;
+					};
+					40B608F127983DCE00DBBA96 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 40B608D127983DCB00DBBA96;
+					};
+				};
+			};
+			buildConfigurationList = 40B608CD27983DCB00DBBA96 /* Build configuration list for PBXProject "JPNasaAPOD" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40B608C927983DCB00DBBA96;
+			productRefGroup = 40B608D327983DCB00DBBA96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40B608D127983DCB00DBBA96 /* JPNasaAPOD */,
+				40B608E727983DCE00DBBA96 /* JPNasaAPODTests */,
+				40B608F127983DCE00DBBA96 /* JPNasaAPODUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40B608D027983DCB00DBBA96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B608E227983DCE00DBBA96 /* LaunchScreen.storyboard in Resources */,
+				40B608DF27983DCE00DBBA96 /* Assets.xcassets in Resources */,
+				40B608DD27983DCB00DBBA96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B608E627983DCE00DBBA96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B608F027983DCE00DBBA96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		421AF11E739EBFE6A9F2CF96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD-JPNasaAPODUITests/Pods-JPNasaAPOD-JPNasaAPODUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51566661BC1B38B92CCC47FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JPNasaAPOD/Pods-JPNasaAPOD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AD1747497A89B6076F8CB2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JPNasaAPODTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		978A577F4413E9CD292640E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JPNasaAPOD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8EFED54701E7A956B21C3A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JPNasaAPOD-JPNasaAPODUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40B608CE27983DCB00DBBA96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B6090D2798D2D000DBBA96 /* ExtensionHelper.swift in Sources */,
+				40B609082798639500DBBA96 /* ADOTableViewCell.swift in Sources */,
+				40B28B28279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld in Sources */,
+				40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */,
+				40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */,
+				40CB2F13279AC5C200520DC8 /* APODEntity+CoreDataClass.swift in Sources */,
+				40B608DA27983DCB00DBBA96 /* JPNasaViewController.swift in Sources */,
+				40B28B1627997ED2002666D0 /* ApiManager.swift in Sources */,
+				40CB2F18279AF0AF00520DC8 /* AlertViewController.swift in Sources */,
+				40B28B212799DC2D002666D0 /* APODResourceAPIInteractor.swift in Sources */,
+				40B28B1E2799A9E7002666D0 /* HomePayLoad.swift in Sources */,
+				40B28B1A2799A978002666D0 /* URLSessionProtocol.swift in Sources */,
+				40B608D627983DCB00DBBA96 /* AppDelegate.swift in Sources */,
+				40B6090A279899B900DBBA96 /* PlayerView.swift in Sources */,
+				40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */,
+				40B608D827983DCB00DBBA96 /* SceneDelegate.swift in Sources */,
+				40B28B2E279A44EC002666D0 /* CoreDataStack.swift in Sources */,
+				40CB2F1A279B6DA700520DC8 /* JPNasaViewDatePickerExtension.swift in Sources */,
+				40CB2F16279AE3A900520DC8 /* NetworkError.swift in Sources */,
+				40B28B1C2799A99E002666D0 /* NetworkReachabilityManager.swift in Sources */,
+				40B28B232799E508002666D0 /* JPNasaViewControllerDataSource.swift in Sources */,
+				40CB2F14279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift in Sources */,
+				40B28B25279A3B0E002666D0 /* APODRequestModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B608E427983DCE00DBBA96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CB2F1C279B79D700520DC8 /* APDOExtensionHelperTest.swift in Sources */,
+				4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */,
+				40B608ED27983DCE00DBBA96 /* JPNasaAPODTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B608EE27983DCE00DBBA96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B608F727983DCE00DBBA96 /* JPNasaAPODUITests.swift in Sources */,
+				40B608F927983DCE00DBBA96 /* JPNasaAPODUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40B608EA27983DCE00DBBA96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40B608D127983DCB00DBBA96 /* JPNasaAPOD */;
+			targetProxy = 40B608E927983DCE00DBBA96 /* PBXContainerItemProxy */;
+		};
+		40B608F427983DCE00DBBA96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40B608D127983DCB00DBBA96 /* JPNasaAPOD */;
+			targetProxy = 40B608F327983DCE00DBBA96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40B608DB27983DCB00DBBA96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40B608DC27983DCB00DBBA96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40B608E027983DCE00DBBA96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40B608E127983DCE00DBBA96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40B608FA27983DCE00DBBA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40B608FB27983DCE00DBBA96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40B608FD27983DCE00DBBA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289125FF553E947090918373 /* Pods-JPNasaAPOD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JPNasaAPOD/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPOD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40B608FE27983DCE00DBBA96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E39B97850398531E58EC911 /* Pods-JPNasaAPOD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JPNasaAPOD/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPOD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		40B6090027983DCE00DBBA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF4C9AEE6830286BCDF7C69A /* Pods-JPNasaAPODTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPODTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JPNasaAPOD.app/JPNasaAPOD";
+			};
+			name = Debug;
+		};
+		40B6090127983DCE00DBBA96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDC10C1E8C631D77BAE1C61 /* Pods-JPNasaAPODTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPODTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JPNasaAPOD.app/JPNasaAPOD";
+			};
+			name = Release;
+		};
+		40B6090327983DCE00DBBA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532BF7448BC78C2BE1BCFCBD /* Pods-JPNasaAPOD-JPNasaAPODUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPODUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JPNasaAPOD;
+			};
+			name = Debug;
+		};
+		40B6090427983DCE00DBBA96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1262699C02A1ACBA19DFB8C6 /* Pods-JPNasaAPOD-JPNasaAPODUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JPNasaAPODUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JPNasaAPOD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40B608CD27983DCB00DBBA96 /* Build configuration list for PBXProject "JPNasaAPOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40B608FA27983DCE00DBBA96 /* Debug */,
+				40B608FB27983DCE00DBBA96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40B608FC27983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40B608FD27983DCE00DBBA96 /* Debug */,
+				40B608FE27983DCE00DBBA96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40B608FF27983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPODTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40B6090027983DCE00DBBA96 /* Debug */,
+				40B6090127983DCE00DBBA96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40B6090227983DCE00DBBA96 /* Build configuration list for PBXNativeTarget "JPNasaAPODUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40B6090327983DCE00DBBA96 /* Debug */,
+				40B6090427983DCE00DBBA96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40B28B26279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40B28B27279A42EA002666D0 /* JPNasaAPOD.xcdatamodel */,
+			);
+			currentVersion = 40B28B27279A42EA002666D0 /* JPNasaAPOD.xcdatamodel */;
+			path = JPNasaAPOD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 40B608CA27983DCB00DBBA96 /* Project object */;
+}
