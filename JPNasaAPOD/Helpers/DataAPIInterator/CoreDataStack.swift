@@ -27,7 +27,6 @@ class CoreDataStack {
     
     var managedObjectContext:NSManagedObjectContext
     
-    /// It will be initalised only when accesed for the first time
     var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "JPNasaAPOD")
 
@@ -47,7 +46,10 @@ class CoreDataStack {
 }
 
 extension CoreDataStack: StorageManager{
-    /// Generic function to fetch from Core data
+
+    /**
+     Generic function to fetch from Core data
+     */
     func fetchFromCoreData<Storable: NSManagedObject>(name: Storable.Type, managedObjectContext:NSManagedObjectContext) -> [Storable]? {
         let entityName = String(describing: name)
         let fetchRequest = NSFetchRequest<Storable>(entityName: entityName)
@@ -62,7 +64,9 @@ extension CoreDataStack: StorageManager{
             return nil
         }
     }
-    /// Save Object into Core database using current main viewContext
+    /**
+     Save Object into Core database using current main viewContext
+     */
     func saveToMainContext(managedObjectContext:NSManagedObjectContext) {
         if managedObjectContext.hasChanges {
             do {
@@ -74,28 +78,24 @@ extension CoreDataStack: StorageManager{
         }
     }
     
-    /// delete all objects from Current view context for the input entity
+    /**
+     Delete all objects from Current view context for the input entity,  in order to unit test from different test managedObjectcontext which is of  NSInMemoryStoreType persistance container ,NSBatchDeleteRequest will not work.
+     */
     func clearStorage<Storable: NSManagedObject>(name: Storable.Type, managedObjectContext:NSManagedObjectContext) {
-
+        
         let entity = String(describing: name)
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        /// first check if there is any data to delete
+        fetchRequest.returnsObjectsAsFaults = false
         do {
-            let result = try managedObjectContext.fetch(fetchRequest)
-            guard result.count > 0 else {
-                return
+            let results = try managedObjectContext.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else {continue}
+                managedObjectContext.delete(objectData)
             }
-            let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-            do {
-                try managedObjectContext.execute(batchDeleteRequest)
-            } catch  {
-                // TODO: error case should be handled
-            }
-        } catch  {
+        } catch {
             // TODO: error case should be handled
             return
         }
-       // saveToMainContext(managedObjectContext: managedObjectContext)
     }
 }
 

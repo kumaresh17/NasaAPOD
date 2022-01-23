@@ -63,3 +63,13 @@ extension UIView {
         self.removeFromSuperview()
     }
 }
+/// Date extension to check for invalid data
+extension Data {
+    func isInValid() -> Bool {
+        return self.count > 200 ? false : true
+    }
+}
+
+
+
+

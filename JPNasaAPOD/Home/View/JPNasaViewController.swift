@@ -23,7 +23,7 @@ class JPNasaViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension;
         setUpDatePicker()
         bindingOfViewWithViewModel()
-        fetchAPOD()
+        //fetchAPOD()
     }
     
     /// Fetch APOD data from Nasa Api

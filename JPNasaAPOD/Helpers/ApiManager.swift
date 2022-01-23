@@ -97,8 +97,7 @@ class ApiManager: ApiServiceProtocol {
                 DispatchQueue.main.async {
                     completion(.failure(NetworkError.invalidRequestHeader))
                 }
-                return
-            }
+                return}
             for (key, value) in headers {
                 urlRequest.setValue(value, forHTTPHeaderField: key)
             }
@@ -110,21 +109,22 @@ class ApiManager: ApiServiceProtocol {
                     DispatchQueue.main.async {
                         completion(.failure(NetworkError.responseError))
                     }
-                    return
-                }
+                    return}
                 guard let data = data else {
                     DispatchQueue.main.async {
                         completion(.failure(NetworkError.noDataFound))
                     }
-                    return
-                }
-                /// Just to check for validita for data
-                // TODO: Improvement is needed to handle the invalid data response e.g empty array []
-                guard data.count > 200 else {
+                    return}
+                if data.isInValid()  {
                     DispatchQueue.main.async {
                         completion(.failure(NetworkError.noDataFound))
                     }
-                    return
+                    return }
+                guard let managedObjectContext = managedObjectContext else {
+                    completion(.failure(NetworkError.coreDataError))
+                    return}
+                managedObjectContext.perform {
+                    CoreDataStack.shared.clearStorage(name: APODEntity.self,managedObjectContext: managedObjectContext)
                 }
                 self?.decodeDataResponse(data: data, managedObjectContext: managedObjectContext, completion: { result in
                     DispatchQueue.main.async {
@@ -151,12 +151,8 @@ class ApiManager: ApiServiceProtocol {
             completion(.failure(NetworkError.coreDataError))
             return
         }
-        guard let managedObjectContext = managedObjectContext else {
-            completion(.failure(NetworkError.coreDataError))
-            return}
         DispatchQueue.global(qos: .background).async {
-            managedObjectContext.perform {
-                CoreDataStack.shared.clearStorage(name: APODEntity.self,managedObjectContext: managedObjectContext)
+            managedObjectContext!.perform {
                 let result: Result<APODModelArray, Error>
                 let decoder = JSONDecoder()
                 decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
@@ -170,7 +166,6 @@ class ApiManager: ApiServiceProtocol {
                 completion(result)
             }
         }
-        
     }
     
 }

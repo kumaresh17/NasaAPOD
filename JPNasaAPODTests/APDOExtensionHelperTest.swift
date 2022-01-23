@@ -43,6 +43,15 @@ class APDOExtensionHelperTest: XCTestCase {
         let videoId = apodCellView.getVideoIdFrom(VideoSource: mediaUrl)
         XCTAssertEqual( videoId, "M6-iC_aYcug?rel=0")
     }
+    
+    
+    func test_to_check_Invalid_data() {
+        let responseString = "[]"
+        let data = Data(responseString.utf8)
+        let isInValidData = data.isInValid()
+        XCTAssertTrue(isInValidData)
+    }
+    
 
     func testExample() throws {
         // This is an example of a functional test case.
