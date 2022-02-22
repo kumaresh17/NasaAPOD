@@ -12,9 +12,10 @@ class NasaViewController: UIViewController {
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    var viewModelProtocol:HomeViewModelProtocol?
     var apodModelProtocol: [APODModelProtocol]?
-    var anyCancelable = Set<AnyCancellable>()
+    
+    private var viewModelProtocol:HomeViewModelProtocol?
+    private var anyCancelable = Set<AnyCancellable>()
     lazy var datePicker = UIDatePicker()
     
     override func viewDidLoad() {

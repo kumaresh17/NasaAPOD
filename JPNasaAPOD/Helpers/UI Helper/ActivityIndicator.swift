@@ -19,10 +19,11 @@ struct ActivityIndicator {
         spinner = UIActivityIndicatorView(style: .large)
         spinner?.translatesAutoresizingMaskIntoConstraints = false
         spinner?.startAnimating()
-        view.addSubview(spinner!)
+        guard let spinner = spinner else {return}
+        view.addSubview(spinner)
         
-        spinner?.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        spinner?.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     static func stopActivityIndicator() {

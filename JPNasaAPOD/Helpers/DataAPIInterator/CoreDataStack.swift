@@ -32,7 +32,7 @@ class CoreDataStack {
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             if let error = error as NSError? {
-                // TODO: error case should be handled
+                // TODO: error case should be handled // Using CLosure Completion block
               return
             }
         })
@@ -59,7 +59,7 @@ extension CoreDataStack: StorageManager{
             }
             return result
         } catch {
-            // TODO: error case should be handled
+            // TODO: error case should be handled // Using CLosure Completion block
             return nil
         }
     }
@@ -92,7 +92,7 @@ extension CoreDataStack: StorageManager{
                 managedObjectContext.delete(objectData)
             }
         } catch {
-            // TODO: error case should be handled
+            // TODO: error case should be handled // Using CLosure Completion block
             return
         }
     }

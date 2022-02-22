@@ -26,7 +26,7 @@ final class APODResourceAPIInteractor:PayLoadFormat,APODResourceAPIInteractorPro
     
     /// Dependency injection for APOD Request and Payload data as a abstact protocol object  (which are used for fetching the APOD data) and  manage object context
     /// Manage object context is injected so that we can have a separate persistance Core data stack with NSInMemoryStoreType for Unit test
-   required init (apiModule:APIModuleProtocol,apodRequest:APODRequestProtocol,mainContext: NSManagedObjectContext) {
+    init (apiModule:APIModuleProtocol,apodRequest:APODRequestProtocol,mainContext: NSManagedObjectContext) {
         self.apiModule = apiModule
         self.apodRequest = apodRequest
         self.mainContext = mainContext
