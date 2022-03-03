@@ -27,17 +27,37 @@ class HomeViewModel:HomeViewModelProtocol {
     @Published var error:Error?
     var dataForViewPub: Published<[APODModelProtocol]?>.Publisher {$dataForView}
     var errorPub: Published<Error?>.Publisher {$error}
-    var apiModuleProtocol:APIModuleProtocol?
-    var apodResourceInteractorProtocol:APODResourceAPIInteractorProtocol?
-    var manageObjectContext:NSManagedObjectContext = CoreDataStack.shared.managedObjectContext
     /**
-     Dependency injection of APODRequest from home screen
+      Api Module, ApiResourceIntractor, ManageObject and ApiManager
      */
+    var apiModuleProtocol:APIModuleProtocol
+    var apodResourceInteractorProtocol:APODResourceAPIInteractorProtocol?
+    var manageObjectContext:NSManagedObjectContext
+    var apiManagerProtocol:ApiManagerProtocol
+    
+    /**
+     Dependency injection with APimodule , api manager and managecontext , to perform mock api and mock inMemory core data context while writing unit test cases for view model.
+     */
+    init(apiModule:APIModuleProtocol,apiManager:ApiManagerProtocol,mainContext:NSManagedObjectContext) {
+        self.apiModuleProtocol = apiModule
+        self.apiManagerProtocol = apiManager
+        self.manageObjectContext = mainContext
+    }
+    
+    /// init to be called from view controller with default paramater and request
+     convenience init(apodRequest:APODRequestProtocol) {
+        self.init(apiModule: APIModule(payloadType: .requestMethodGET, dateToSearch: apodRequest.startDate ?? nil), apiManager: ApiManager(), mainContext: CoreDataStack.shared.managedObjectContext)
+    }
+    
+    ///  default init which can be used for test cases of view model
+    convenience init() {
+        self.init(apiModule: APIModule(payloadType: .requestMethodGET, dateToSearch: nil), apiManager: ApiManager(), mainContext: CoreDataStack.shared.managedObjectContext)
+    }
+    
     func getAODDataForHomeScreen(apodRequest:APODRequestProtocol) -> Void {
         guard let dateString = apodRequest.startDate else {return}
-        self.error = nil
         apiModuleProtocol = APIModule(payloadType: .requestMethodGET, dateToSearch: dateString)
-        apodResourceInteractorProtocol = APODResourceAPIInteractor.init(apiModule: apiModuleProtocol!, apodRequest: apodRequest, mainContext: manageObjectContext)
+        apodResourceInteractorProtocol = APODResourceAPIInteractor.init(apiModule: self.apiModuleProtocol, mainContext: manageObjectContext,apiManager:self.apiManagerProtocol)
         apodResourceInteractorProtocol?.getAPODDataRespose() { [weak self]
             (APODData,error) in
             /// Use of combine to bind viewMode Data to View
@@ -60,6 +80,5 @@ class HomeViewModel:HomeViewModelProtocol {
         }
         return result
     }
-
 }
 

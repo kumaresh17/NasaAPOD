@@ -61,12 +61,12 @@ enum HTTPHeaderType: String{
 
 struct APIModule:APIModuleProtocol {
     var payloadType: HTTPPayloadType?
-    var dateToSearch:String = ""
+    var dateToSearch:String?
 }
 
 protocol APIModuleProtocol {
     var payloadType: HTTPPayloadType? {get set}
-    var dateToSearch:String {get set}
+    var dateToSearch:String? {get set}
 }
 /**
  More HTTPS method can be added here

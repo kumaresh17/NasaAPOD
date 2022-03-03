@@ -10,6 +10,9 @@
 		404405D6279D9ED500EBFA06 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404405D5279D9ED500EBFA06 /* MockApiManager.swift */; };
 		404405DC279DC03D00EBFA06 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 404405DB279DC03D00EBFA06 /* YouTubeiOSPlayerHelper */; };
 		404405DE279DE31100EBFA06 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 404405DD279DE31100EBFA06 /* README.md */; };
+		405416E827D14D01000552BA /* ApiManagerResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405416E727D14D01000552BA /* ApiManagerResponseValidator.swift */; };
+		405416EA27D153B1000552BA /* ApiManagerPrepareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405416E927D153B1000552BA /* ApiManagerPrepareRequest.swift */; };
+		405416EC27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405416EB27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift */; };
 		4086CFEA279CA7080088C915 /* CoreDatatStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */; };
 		40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1027997A95002666D0 /* HomeViewModel.swift */; };
 		40B28B1427997EA8002666D0 /* APODResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B28B1327997EA8002666D0 /* APODResponseModel.swift */; };
@@ -63,6 +66,9 @@
 /* Begin PBXFileReference section */
 		404405D5279D9ED500EBFA06 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		404405DD279DE31100EBFA06 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		405416E727D14D01000552BA /* ApiManagerResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerResponseValidator.swift; sourceTree = "<group>"; };
+		405416E927D153B1000552BA /* ApiManagerPrepareRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerPrepareRequest.swift; sourceTree = "<group>"; };
+		405416EB27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerDecodeDataResponse.swift; sourceTree = "<group>"; };
 		4086CFE9279CA7080088C915 /* CoreDatatStackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatatStackTest.swift; sourceTree = "<group>"; };
 		40B28B1027997A95002666D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		40B28B1327997EA8002666D0 /* APODResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODResponseModel.swift; sourceTree = "<group>"; };
@@ -150,8 +156,13 @@
 			isa = PBXGroup;
 			children = (
 				40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */,
-				40B28B2D279A44EC002666D0 /* CoreDataStack.swift */,
+				40B28B192799A978002666D0 /* URLSessionProtocol.swift */,
+				405416E927D153B1000552BA /* ApiManagerPrepareRequest.swift */,
+				40B28B1527997ED2002666D0 /* ApiManager.swift */,
+				405416E727D14D01000552BA /* ApiManagerResponseValidator.swift */,
+				405416EB27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift */,
 				40CB2F15279AE3A900520DC8 /* NetworkError.swift */,
+				40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */,
 			);
 			path = DataAPIInterator;
 			sourceTree = "<group>";
@@ -240,10 +251,8 @@
 			children = (
 				4086CFE6279C31E70088C915 /* UI Helper */,
 				40B28B1F2799DBD1002666D0 /* DataAPIInterator */,
+				40B28B2D279A44EC002666D0 /* CoreDataStack.swift */,
 				40B6090C2798D2D000DBBA96 /* ExtensionHelper.swift */,
-				40B28B1527997ED2002666D0 /* ApiManager.swift */,
-				40B28B192799A978002666D0 /* URLSessionProtocol.swift */,
-				40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */,
 				40B28B1D2799A9E7002666D0 /* HomePayLoad.swift */,
 			);
 			path = Helpers;
@@ -397,12 +406,14 @@
 			files = (
 				40B6090D2798D2D000DBBA96 /* ExtensionHelper.swift in Sources */,
 				40B609082798639500DBBA96 /* ADOTableViewCell.swift in Sources */,
+				405416E827D14D01000552BA /* ApiManagerResponseValidator.swift in Sources */,
 				40B28B28279A42EA002666D0 /* JPNasaAPOD.xcdatamodeld in Sources */,
 				40B28B1127997A95002666D0 /* HomeViewModel.swift in Sources */,
 				40CB2F1E279B809800520DC8 /* ActivityIndicator.swift in Sources */,
 				40CB2F13279AC5C200520DC8 /* APODEntity+CoreDataClass.swift in Sources */,
 				40B608DA27983DCB00DBBA96 /* NasaViewController.swift in Sources */,
 				40B28B1627997ED2002666D0 /* ApiManager.swift in Sources */,
+				405416EC27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift in Sources */,
 				40CB2F18279AF0AF00520DC8 /* AlertViewController.swift in Sources */,
 				40B28B212799DC2D002666D0 /* APODResourceAPIInteractor.swift in Sources */,
 				40B28B1E2799A9E7002666D0 /* HomePayLoad.swift in Sources */,
@@ -417,6 +428,7 @@
 				40B28B1C2799A99E002666D0 /* NetworkReachabilityManager.swift in Sources */,
 				40B28B232799E508002666D0 /* NasaViewControllerDataSource.swift in Sources */,
 				40CB2F14279AC5C200520DC8 /* APODEntity+CoreDataProperties.swift in Sources */,
+				405416EA27D153B1000552BA /* ApiManagerPrepareRequest.swift in Sources */,
 				40B28B25279A3B0E002666D0 /* APODRequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
