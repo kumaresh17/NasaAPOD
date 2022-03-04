@@ -156,11 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				40B28B202799DC2D002666D0 /* APODResourceAPIInteractor.swift */,
-				40B28B192799A978002666D0 /* URLSessionProtocol.swift */,
-				405416E927D153B1000552BA /* ApiManagerPrepareRequest.swift */,
-				40B28B1527997ED2002666D0 /* ApiManager.swift */,
-				405416E727D14D01000552BA /* ApiManagerResponseValidator.swift */,
-				405416EB27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift */,
+				40CDC1B027D235FD0090538A /* Network layer */,
 				40CB2F15279AE3A900520DC8 /* HandledError.swift */,
 				40B28B1B2799A99E002666D0 /* NetworkReachabilityManager.swift */,
 			);
@@ -264,6 +260,18 @@
 				40B28B1027997A95002666D0 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		40CDC1B027D235FD0090538A /* Network layer */ = {
+			isa = PBXGroup;
+			children = (
+				40B28B192799A978002666D0 /* URLSessionProtocol.swift */,
+				405416E927D153B1000552BA /* ApiManagerPrepareRequest.swift */,
+				40B28B1527997ED2002666D0 /* ApiManager.swift */,
+				405416E727D14D01000552BA /* ApiManagerResponseValidator.swift */,
+				405416EB27D15BB6000552BA /* ApiManagerDecodeDataResponse.swift */,
+			);
+			path = "Network layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

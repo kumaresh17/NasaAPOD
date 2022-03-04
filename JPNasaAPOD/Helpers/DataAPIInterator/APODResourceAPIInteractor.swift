@@ -32,6 +32,11 @@ final class APODResourceAPIInteractor:PayLoadFormat,APODResourceAPIInteractorPro
     
     func getAPODDataRespose(completion:@escaping (_ result:[APODEntity]?,_ error:Error?) -> Void) -> Void {
 
+       let  aopdData = CoreDataStack.shared.fetchFromCoreData(name: APODEntity.self, managedObjectContext: self.mainContext)
+           completion(aopdData,nil)
+           return
+      
+        
         let payload = formatGetPayload(url: .AODURL, module: apiModule)
         self.apiManager.getAODInfo(payload: payload,managedObjectContext:mainContext) { [unowned self] result in
             var responseError: Error? = nil

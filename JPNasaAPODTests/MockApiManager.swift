@@ -41,7 +41,6 @@ extension MockApiManager: ApiManagerProtocol {
         
         getAPODApiCalled = true
         
-        getAPODApiCalled = true
         let (urlRequest,error) = apiManager.prepareRequest(withPayload: payLoad)
         if error != nil  {
             completion(.failure(error!))
@@ -68,9 +67,6 @@ extension MockApiManager: ApiManagerProtocol {
             })
         }
     }
-    
-                                                       
-                                                   
     
     func getAODInfo(payload: HTTPPayloadProtocol, managedObjectContext: NSManagedObjectContext?, completion: @escaping (Result<APODModelArray, Error>) -> Void) {
       

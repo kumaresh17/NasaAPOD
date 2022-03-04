@@ -16,7 +16,7 @@ c. Last service call including image should be cached and loaded if any subseque
 
 a. Code structure and software architecture and design - using MVVM CLEAN architecture.
 b. Combine used to bind VieModel to View
-d. Unit test cases - With Mock APi call and with Test Core data stack using NSInMemoryStoreType
+d. Unit test cases - With Mock APi call and with Test Core data stack using NSInMemoryStoreType and UITest cases
 e. Coding best practice - Using of Protocol, extension, codable, Dependency injection for better Testability, modularity,readability and scalability.
 f. YouTubeiOSPlayerHelper - Third party Swift package manager is used to support Youtube video within the App.
 g. Support dark mode - as all the colors are by default system color.
@@ -28,4 +28,4 @@ g. Support dark mode - as all the colors are by default system color.
  b. On tap navigate to the next screen and Play the video on full screen and view the image on full screen.
  c. Implement search from and to date to see the lists of all the APOD between the selected dates. 
  d. Enable the app for iPad to cover more screens for Video and Image.
- c. Error message copy 
+ c. Write performance Unit test for XCTMemoryMetric and XCTCPUMetric

@@ -18,25 +18,37 @@ class JPNasaAPODUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func test_ApodHomeScreen_textfield_picker_tap_cancel_done_Visible() {
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        let textField = app.windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element
+        let toolBarCancelButton =  app.toolbars["Toolbar"].buttons["Cancel"]
+        let tootlbarDoneButton = app.toolbars["Toolbar"].buttons["Done"]
+        let datePickersQuery = app.datePickers.element
+        
+        XCTAssertTrue(textField.exists)
+        XCTAssertFalse(tootlbarDoneButton.exists)
+        XCTAssertFalse(toolBarCancelButton.exists)
+        XCTAssertFalse(datePickersQuery.exists)
+        textField.tap()
+        XCTAssertTrue(datePickersQuery.exists)
+        XCTAssertTrue(tootlbarDoneButton.exists)
+        XCTAssertTrue(toolBarCancelButton.exists)
+        toolBarCancelButton.tap()
+        XCTAssertFalse(toolBarCancelButton.exists)
+        XCTAssertFalse(tootlbarDoneButton.exists)
+        XCTAssertFalse(datePickersQuery.exists)
+        
+        textField.tap()
+        XCTAssertTrue(datePickersQuery.exists)
+        XCTAssertTrue(tootlbarDoneButton.exists)
+        XCTAssertTrue(toolBarCancelButton.exists)
+        tootlbarDoneButton.tap()
+        XCTAssertFalse(toolBarCancelButton.exists)
+        XCTAssertFalse(tootlbarDoneButton.exists)
+        XCTAssertFalse(datePickersQuery.exists)
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+    
 }
