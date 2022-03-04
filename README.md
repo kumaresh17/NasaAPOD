@@ -29,3 +29,7 @@ g. Support dark mode - as all the colors are by default system color.
  c. Implement search from and to date to see the lists of all the APOD between the selected dates. 
  d. Enable the app for iPad to cover more screens for Video and Image.
  c. Write performance Unit test for XCTMemoryMetric and XCTCPUMetric
+
+**Screen shot**
+
+![image](https://user-images.githubusercontent.com/19665932/156764915-60fa503d-0e4b-4db5-8c53-5b11f5f15a16.png)
