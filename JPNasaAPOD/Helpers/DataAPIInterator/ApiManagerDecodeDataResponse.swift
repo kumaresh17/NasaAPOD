@@ -18,7 +18,7 @@ extension ApiManager {
     func decodeDataResponse<T:Codable>(data:Data,managedObjectContext:NSManagedObjectContext?, completion: @escaping (Result<T,Error>) -> Void) -> Void {
         
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
-            completion(.failure(NetworkError.coreDataError))
+            completion(.failure(HandledError.coreDataError))
             return
         }
         let result: Result<T, Error>

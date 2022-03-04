@@ -103,13 +103,13 @@ class ApiManager: ApiServiceProtocol {
             return
         }
         guard let urlRequest = urlRequest else {
-            completion(.failure(NetworkError.invalidRequestHeader))
+            completion(.failure(HandledError.invalidRequestHeader))
             return
         }
         task = urlSession.dataTask(with: urlRequest, completionHandler: {[weak self] (data, response, error) in
             guard let managedObjectContext = managedObjectContext else {
                 DispatchQueue.main.async {
-                    completion(.failure(NetworkError.coreDataError))
+                    completion(.failure(HandledError.coreDataError))
                 }
                 return}
             self?.apiManagerResponseDataValidator(data: data, urlResponse: response as? HTTPURLResponse, completion: { error in

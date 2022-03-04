@@ -1,5 +1,5 @@
 //
-//  NetworkError.swift
+//  HandledError.swift
 //  JPNasaAPOD
 //
 //  Created by kumaresh shrivastava on 21/01/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum HandledError: Error {
     case invalidURL
     case responseError
     case noDataFound
@@ -18,10 +18,11 @@ enum NetworkError: Error {
     case invalidPayload
     case emptyData_SucessResponseCode
     case coreDataError
+    case inValidApodDate
 }
 
 
-extension NetworkError: LocalizedError {
+extension HandledError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidURL:
@@ -44,6 +45,9 @@ extension NetworkError: LocalizedError {
             return NSLocalizedString("Unknown error", comment: "Unknown error")
         case .inValidData:
             return NSLocalizedString("No data found", comment: "inValidData error")
+        case .inValidApodDate:
+            return NSLocalizedString("Date is missing to get APOD", comment: "inValidApodDate")
+            
         }
     }
 }

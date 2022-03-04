@@ -8,6 +8,7 @@
 import XCTest
 @testable import JPNasaAPOD
 import CoreData
+import Combine
 
 class NasaAPODTests: XCTestCase,PayLoadFormat {
 
@@ -15,7 +16,7 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
     var apiModuleProtocol:APIModuleProtocol?
     var apodRequestProtocol:APODRequestProtocol?
     var apiManager: ApiManager?
-    var homeScreenModel: HomeViewModel?
+    var homeViewModel: HomeViewModel?
     
     /**
      Mock Api and Core data objects
@@ -29,7 +30,7 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
         apiModuleProtocol = APIModule()
         apodRequestProtocol = APODRequest()
         apiManager =  ApiManager()
-        homeScreenModel = HomeViewModel()
+        homeViewModel = HomeViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -37,7 +38,7 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
         apiInteractorProtocol = nil
         apiModuleProtocol = nil
         apodRequestProtocol = nil
-        homeScreenModel = nil
+        homeViewModel = nil
     }
     /**
          Test the payload format which is used for the Api call
@@ -172,7 +173,7 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
         /// Perform save to core data and fetch to check
         CoreDataStack.shared.saveToMainContext(managedObjectContext: (self.coreDataStackTest.mainContext))
         let aopdData = CoreDataStack.shared.fetchFromCoreData(name: APODEntity.self, managedObjectContext:(self.coreDataStackTest.mainContext))
-        let result:[APODModelProtocol] = (homeScreenModel?.mapToViewModelProtocol(managedObject: aopdData))!
+        let result:[APODModelProtocol] = (homeViewModel?.mapToViewModelProtocol(managedObject: aopdData))!
         XCTAssertNotNil(result)
         XCTAssertGreaterThan(result.count, 0)
         XCTAssertEqual( result[0].title, "Orion over the Austrian Alps")
@@ -183,6 +184,162 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
         
     }
     
+    // MARK: Test Home View Model
+    
+    func test_viewmodel_with_mock_data_getAODDataForHomeScreen_sucess() {
+        
+        let responseString = "[{\"copyright\":\"Luk\\ufffd Vesel\\ufffd\",\"date\":\"2019-01-23\",\"explanation\":\"Do you recognize this constellation? Through the icicles and past the mountains is Orion, one of the most identifiable star groupings on the sky and an icon familiar to humanity for over 30,000 years. Orion has looked pretty much the same during the past 50,000 years and should continue to look the same for many thousands of years into the future\",\"hdurl\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_740.jpg\",\"media_type\":\"image\",\"service_version\":\"v1\",\"title\":\"Orion over the Austrian Alps\",\"url\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_960.jpg\"}]\n"
+
+        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        mockApiManager = MockApiManager.init(false, withMockData: responseString, mockResponse: mockResposne!)
+        
+        apiModuleProtocol?.payloadType = .requestMethodGET
+        apiModuleProtocol?.dateToSearch = nil
+        
+        homeViewModel = HomeViewModel.init(apiModule: apiModuleProtocol!, apiManager: mockApiManager, mainContext: coreDataStackTest.mainContext)
+        apodRequestProtocol?.startDate = "2020-07-10"
+        apodRequestProtocol?.endDate = "2020-07-10"
+        homeViewModel?.getAODDataForHomeScreen(apodRequest: apodRequestProtocol!)
+        let expected = expectation(description: "sink data")
+        var cancellable = Set<AnyCancellable>()
+        
+        homeViewModel?.dataForViewPub
+            .receive(on: DispatchQueue.main)
+            .sink { result in
+                expected.fulfill()
+                XCTAssertNotNil(result)
+                XCTAssertEqual( result![0].title, "Orion over the Austrian Alps")
+                XCTAssertEqual( result![0].date, "2019-01-23")
+                XCTAssertEqual( result![0].mediaSourceURL, "https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_960.jpg")
+                XCTAssertEqual( result![0].mediaType, "image")
+                XCTAssertEqual( result![0].explanation, "Do you recognize this constellation? Through the icicles and past the mountains is Orion, one of the most identifiable star groupings on the sky and an icon familiar to humanity for over 30,000 years. Orion has looked pretty much the same during the past 50,000 years and should continue to look the same for many thousands of years into the future")
+            }
+            .store(in: &cancellable)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_viewmodel_with_mock_data_empty_start_date_getAODDataForHomeScreen_error () {
+        
+        let responseString = "[{\"copyright\":\"Luk\\ufffd Vesel\\ufffd\",\"date\":\"2019-01-23\",\"explanation\":\"Do you recognize this constellation? Through the icicles and past the mountains is Orion, one of the most identifiable star groupings on the sky and an icon familiar to humanity for over 30,000 years. Orion has looked pretty much the same during the past 50,000 years and should continue to look the same for many thousands of years into the future\",\"hdurl\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_740.jpg\",\"media_type\":\"image\",\"service_version\":\"v1\",\"title\":\"Orion over the Austrian Alps\",\"url\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_960.jpg\"}]\n"
+        
+        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        mockApiManager = MockApiManager.init(false, withMockData: responseString, mockResponse: mockResposne!)
+        
+        apiModuleProtocol?.payloadType = .requestMethodGET
+        apiModuleProtocol?.dateToSearch = nil
+        
+        homeViewModel = HomeViewModel.init(apiModule: apiModuleProtocol!, apiManager: mockApiManager, mainContext: coreDataStackTest.mainContext)
+        apodRequestProtocol?.startDate = nil
+        apodRequestProtocol?.endDate = nil
+        homeViewModel?.getAODDataForHomeScreen(apodRequest: apodRequestProtocol!)
+        let expected = expectation(description: "sink data")
+        var cancellable = Set<AnyCancellable>()
+        
+        homeViewModel?.errorPub
+            .receive(on: DispatchQueue.main)
+            .sink { error in
+                expected.fulfill()
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error?.localizedDescription, HandledError.inValidApodDate.localizedDescription)
+            }
+            .store(in: &cancellable)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    
+    func test_viewmodel_with_mock_invalid_response_code_data_getAODDataForHomeScreen_error() {
+        
+        let responseString = "[{\"copyright\":\"Luk\\ufffd Vesel\\ufffd\",\"date\":\"2019-01-23\",\"explanation\":\"Do you recognize this constellation? Through the icicles and past the mountains is Orion, one of the most identifiable star groupings on the sky and an icon familiar to humanity for over 30,000 years. Orion has looked pretty much the same during the past 50,000 years and should continue to look the same for many thousands of years into the future\",\"hdurl\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_740.jpg\",\"media_type\":\"image\",\"service_version\":\"v1\",\"title\":\"Orion over the Austrian Alps\",\"url\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_960.jpg\"}]\n"
+        
+        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 400, httpVersion: nil, headerFields: nil)
+        
+        mockApiManager = MockApiManager.init(false, withMockData: responseString, mockResponse: mockResposne!)
+        
+        apiModuleProtocol?.payloadType = .requestMethodGET
+        apiModuleProtocol?.dateToSearch = nil
+        
+        homeViewModel = HomeViewModel.init(apiModule: apiModuleProtocol!, apiManager: mockApiManager, mainContext: coreDataStackTest.mainContext)
+        apodRequestProtocol?.startDate = "2020-07-10"
+        apodRequestProtocol?.endDate = "2020-07-10"
+        homeViewModel?.getAODDataForHomeScreen(apodRequest: apodRequestProtocol!)
+        let expected = expectation(description: "sink data")
+        var cancellable = Set<AnyCancellable>()
+        
+        homeViewModel?.errorPub
+            .receive(on: DispatchQueue.main)
+            .sink { error in
+                expected.fulfill()
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error?.localizedDescription, HandledError.responseError.localizedDescription)
+            }
+            .store(in: &cancellable)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_viewmodel_with_mock_Invalid_response_getAODDataForHomeScreen_error() {
+        
+        let responseString = "["
+        
+        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        mockApiManager = MockApiManager.init(false, withMockData: responseString, mockResponse: mockResposne!)
+        
+        apiModuleProtocol?.payloadType = .requestMethodGET
+        apiModuleProtocol?.dateToSearch = nil
+        
+        homeViewModel = HomeViewModel.init(apiModule: apiModuleProtocol!, apiManager: mockApiManager, mainContext: coreDataStackTest.mainContext)
+        apodRequestProtocol?.startDate = "2020-07-10"
+        apodRequestProtocol?.endDate = "2020-07-10"
+        homeViewModel?.getAODDataForHomeScreen(apodRequest: apodRequestProtocol!)
+        let expected = expectation(description: "sink data")
+        var cancellable = Set<AnyCancellable>()
+        
+        homeViewModel?.errorPub
+            .receive(on: DispatchQueue.main)
+            .sink { error in
+                expected.fulfill()
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error?.localizedDescription, HandledError.inValidData.localizedDescription)
+            }
+            .store(in: &cancellable)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_viewmodel_with_mock_nil_Data_in_resposne_getAODDataForHomeScreen_error() {
+        
+        let responseString:String? = nil
+        
+        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        mockApiManager = MockApiManager.init(false, withMockData: responseString, mockResponse: mockResposne!)
+        
+        apiModuleProtocol?.payloadType = .requestMethodGET
+        apiModuleProtocol?.dateToSearch = nil
+        
+        homeViewModel = HomeViewModel.init(apiModule: apiModuleProtocol!, apiManager: mockApiManager, mainContext: coreDataStackTest.mainContext)
+        apodRequestProtocol?.startDate = "2020-07-10"
+        apodRequestProtocol?.endDate = "2020-07-10"
+        homeViewModel?.getAODDataForHomeScreen(apodRequest: apodRequestProtocol!)
+        let expected = expectation(description: "sink data")
+        var cancellable = Set<AnyCancellable>()
+        
+        homeViewModel?.errorPub
+            .receive(on: DispatchQueue.main)
+            .sink { error in
+                expected.fulfill()
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error?.localizedDescription, HandledError.noDataFound.localizedDescription)
+            }
+            .store(in: &cancellable)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
     
     /**
        Function to have the decoded data in the core data model graph from the mock api response
@@ -192,8 +349,9 @@ class NasaAPODTests: XCTestCase,PayLoadFormat {
     func decode__mock_api_response_into_coredata_codable_managed_datamodel() {
         let responseString = "[{\"copyright\":\"Luk\\ufffd Vesel\\ufffd\",\"date\":\"2019-01-23\",\"explanation\":\"Do you recognize this constellation? Through the icicles and past the mountains is Orion, one of the most identifiable star groupings on the sky and an icon familiar to humanity for over 30,000 years. Orion has looked pretty much the same during the past 50,000 years and should continue to look the same for many thousands of years into the future.  Orion is quite prominent in the sky this time of year, a recurring sign of (modern) winter in Earth\'s northern hemisphere and summer in the south. Pictured, Orion was captured recently above the Austrian Alps in a composite of seven images taken by the same camera in the same location during the same night. Below and slightly to the right of Orion\'s three-star belt is the Orion Nebula, while the four bright stars surrounding the belt are, clockwise from the upper left, Betelgeuse, Bellatrix, Rigel, and Saiph.    New: Instagram page features cool images recently submitted to APOD\",\"hdurl\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_740.jpg\",\"media_type\":\"image\",\"service_version\":\"v1\",\"title\":\"Orion over the Austrian Alps\",\"url\":\"https://apod.nasa.gov/apod/image/1901/OrionAlps_Vesely_960.jpg\"}]\n"
 
-        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
         let expect = expectation(description: "core data expectation")
+        let mockResposne =  HTTPURLResponse(url:URL.init(string: "https://foo.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+       
         apiModuleProtocol?.payloadType = .requestMethodGET
         apiModuleProtocol?.dateToSearch = "2020-07-10"
         let payload = formatGetPayload(url: .AODURL, module: apiModuleProtocol!)

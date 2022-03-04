@@ -27,8 +27,7 @@ class NasaViewController: UIViewController {
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableView.automaticDimension
         setUpDatePicker()
-        let request = APODRequest(startDate: dateTextField.text, endDate: dateTextField.text)
-        viewModelProtocol = HomeViewModel.init(apodRequest: request)
+        viewModelProtocol = HomeViewModel()
         bindingOfViewWithViewModel()
         fetchAPOD()
     }

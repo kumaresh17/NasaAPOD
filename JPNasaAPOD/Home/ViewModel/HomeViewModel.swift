@@ -36,7 +36,7 @@ class HomeViewModel:HomeViewModelProtocol {
     var apiManagerProtocol:ApiManagerProtocol
     
     /**
-     Dependency injection with APimodule , api manager and managecontext , to perform mock api and mock inMemory core data context while writing unit test cases for view model.
+     Dependency injection with APimodule payload , api manager and managecontext , to perform mock api and mock inMemory core data context while writing unit test cases for view model.
      */
     init(apiModule:APIModuleProtocol,apiManager:ApiManagerProtocol,mainContext:NSManagedObjectContext) {
         self.apiModuleProtocol = apiModule
@@ -54,10 +54,17 @@ class HomeViewModel:HomeViewModelProtocol {
         self.init(apiModule: APIModule(payloadType: .requestMethodGET, dateToSearch: nil), apiManager: ApiManager(), mainContext: CoreDataStack.shared.managedObjectContext)
     }
     
+    /**
+     Fetch the APOD data from the API maanger
+     store it in Core data stack and return  the object model in completion handler
+     and sink the required mapped data or error to view using the combine publisher stream
+     */
     func getAODDataForHomeScreen(apodRequest:APODRequestProtocol) -> Void {
-        guard let dateString = apodRequest.startDate else {return}
-        apiModuleProtocol = APIModule(payloadType: .requestMethodGET, dateToSearch: dateString)
-        apodResourceInteractorProtocol = APODResourceAPIInteractor.init(apiModule: self.apiModuleProtocol, mainContext: manageObjectContext,apiManager:self.apiManagerProtocol)
+        guard let dateString = apodRequest.startDate  else {
+            error = HandledError.inValidApodDate
+            return}
+        apiModuleProtocol.dateToSearch = dateString
+        apodResourceInteractorProtocol = APODResourceAPIInteractor.init(apiModule: self.apiModuleProtocol, mainContext: self.manageObjectContext,apiManager:self.apiManagerProtocol)
         apodResourceInteractorProtocol?.getAPODDataRespose() { [weak self]
             (APODData,error) in
             /// Use of combine to bind viewMode Data to View

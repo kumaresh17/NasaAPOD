@@ -12,13 +12,13 @@ extension ApiManager {
     func apiManagerResponseDataValidator(data:Data?,urlResponse:HTTPURLResponse?,completion:(Error?) -> Void ) -> Void {
         
         guard let httpResponse = urlResponse, 200...299 ~= httpResponse.statusCode else {
-                completion(NetworkError.responseError)
+            completion(HandledError.responseError)
             return}
         guard let data = data else {
-                completion(NetworkError.noDataFound)
+            completion(HandledError.noDataFound)
             return}
         if data.isInValid()  {
-                completion(NetworkError.noDataFound)
+            completion(HandledError.inValidData)
             return }
         
         completion(nil)

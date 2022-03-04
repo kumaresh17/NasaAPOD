@@ -37,12 +37,12 @@ final class APODResourceAPIInteractor:PayLoadFormat,APODResourceAPIInteractorPro
             var responseError: Error? = nil
             switch result {
             case .success(let data):
-                data.isEmpty ? responseError = NetworkError.noDataFound : CoreDataStack.shared.saveToMainContext(managedObjectContext: self.mainContext)
+                data.isEmpty ? responseError = HandledError.noDataFound : CoreDataStack.shared.saveToMainContext(managedObjectContext: self.mainContext)
             case .failure(let error):
                 responseError = error
             }
             guard let aopdData = CoreDataStack.shared.fetchFromCoreData(name: APODEntity.self, managedObjectContext: self.mainContext) else {
-                let errorDes = responseError ?? NetworkError.noDataFound
+                let errorDes = responseError ?? HandledError.noDataFound
                 completion(nil,errorDes)
                 return }
             completion(aopdData,responseError)
