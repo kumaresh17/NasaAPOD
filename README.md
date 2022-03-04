@@ -30,7 +30,10 @@ g. Support dark mode - as all the colors are by default system color.
  d. Enable the app for iPad to cover more screens for Video and Image.
  c. Write performance Unit test for XCTMemoryMetric and XCTCPUMetric
 
-**Screen shot**
+**Screen shots**
 
 ![image](https://user-images.githubusercontent.com/19665932/156765059-11f1693d-e1b2-423e-b090-90404a6905e0.png)
+
+![image](https://user-images.githubusercontent.com/19665932/156765197-88bcee6f-ece1-4bf9-9b6e-4b9adfd3ff72.png)
+
 
