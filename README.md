@@ -32,4 +32,5 @@ g. Support dark mode - as all the colors are by default system color.
 
 **Screen shot**
 
-![image](https://user-images.githubusercontent.com/19665932/156764915-60fa503d-0e4b-4db5-8c53-5b11f5f15a16.png)
+![image](https://user-images.githubusercontent.com/19665932/156765059-11f1693d-e1b2-423e-b090-90404a6905e0.png)
+
